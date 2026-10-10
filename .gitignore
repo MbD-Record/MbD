@@ -13,3 +13,7 @@ dist/
 Thumbs.db
 *.log
 npm-debug.log*
+
+# Local session notes, never committed
+SESSION-HANDOFF.md
+NOTES.md
