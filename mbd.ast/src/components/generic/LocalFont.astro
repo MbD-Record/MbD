@@ -1,4 +1,4 @@
----
+﻿---
 import { join } from "node:path";
 import { AstroFont } from "astro-font";
 
@@ -27,7 +27,7 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
       fallback: "sans-serif",
       src: [
         {
-          preload: false,
+          preload: true,
           style: "normal",
           path: getFontPath("poppins.ttf"),
         },
@@ -40,7 +40,7 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
       selector: ".righteous",
       src: [
         {
-          preload: false,
+          preload: true,
           style: "normal",
           path: getFontPath("righteous.ttf"),
         },
@@ -53,7 +53,7 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
       selector: ".sanchez",
       src: [
         {
-          preload: false,
+          preload: true,
           style: "normal",
           path: getFontPath("sanchez.ttf"),
         },
@@ -66,7 +66,7 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
       name: "DM Serif Text",
       src: [
         {
-          preload: false,
+          preload: true,
           style: "normal",
           path: getFontPath("dm-serif.ttf"),
         },
@@ -74,3 +74,4 @@ const getFontPath = (name: string) => join(appDir, "public", "fonts", name);
     },
   ]}
 />
+

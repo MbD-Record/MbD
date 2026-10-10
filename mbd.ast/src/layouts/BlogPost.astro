@@ -3,19 +3,54 @@ import Layout from './Default.astro';
 import BlogSideBar from '@components/blog/BlogSideBar.astro';
 import BlogContent from '@components/blog/BlogContent.astro';
 import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+import { getCollection } from 'astro:content';
+import { byYearDesc } from '../lib/entries';
 
 const { content, headings } = Astro.props;
 const { title, description } = content;
+
+const entries = (await getCollection('blog')).sort(byYearDesc);
+const position = entries.findIndex((entry) => entry.slug === Astro.params.slug);
+
+// Newest sits above older in this list, so the entry before the current one is
+// the newer page and the entry after it is the older page.
+const newer = position > 0 ? entries[position - 1] : null;
+const older =
+  position >= 0 && position < entries.length - 1 ? entries[position + 1] : null;
 ---
 
 <Layout title={title as string} description={description as string}>
-  <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
-    <BlogSideBar headings={headings} />
-    <BlogContent content={content}>
-      <slot />
-    </BlogContent>
+  <main class='mbd-page p-6'>
+    <div class='flex flex-col lg:grid lg:grid-cols-[auto_1fr] gap-8'>
+      <BlogSideBar headings={headings} />
+      <div class='w-full md:w-prose lg:w-[60%] lg:ml-[15%]'>
+        <BlogContent>
+          <slot />
+        </BlogContent>
+        <nav class='mbd-card mbd-card--5 mt-6 flex flex-wrap gap-4 justify-between'>
+          <div class='flex-1 min-w-0'>
+            {
+              newer ? (
+                <a class='mbd-btn mbd-btn--compact' href={`/blog/${newer.slug}/`}>
+                  &larr; {newer.data.title}
+                </a>
+              ) : null
+            }
+          </div>
+          <div class='flex-1 min-w-0 text-right'>
+            {
+              older ? (
+                <a class='mbd-btn mbd-btn--compact' href={`/blog/${older.slug}/`}>
+                  {older.data.title} &rarr;
+                </a>
+              ) : null
+            }
+          </div>
+        </nav>
+      </div>
+    </div>
   </main>
-  <section class='p-6'>
-    <RecentBlogPosts count={3} />
+  <section class='mbd-page p-6'>
+    <RecentBlogPosts />
   </section>
 </Layout>

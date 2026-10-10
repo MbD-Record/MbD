@@ -1,28 +1,15 @@
 ---
-import { Card } from '@eliancodes/brutal-ui';
-import { Image } from 'astro:assets';
-
 interface Props {
   title: string;
-  imgSrc: ImageMetadata;
-  imgAlt: string;
   description: string;
+  variant?: 'blog' | string;
 }
 
-const { title, imgAlt, imgSrc, description } = Astro.props;
+const { title, description, variant = '1' } = Astro.props;
 ---
 
-<Card color='white'>
-  <h3 class='poppins text-lg md:text-xl'>{title}</h3>
-  <div class='rounded-lg border-3 border-black my-4 h-56'>
-    <Image
-      src={imgSrc}
-      alt={imgAlt}
-      width={800}
-      height={400}
-      class='rounded h-full w-full object-cover'
-    />
-  </div>
-  <p class='poppins'>{description}</p>
+<div class={`mbd-card mbd-card--${variant}`}>
+  <h3 class='poppins text-base md:text-xl leading-tight'>{title}</h3>
+  <p class='poppins mt-2 md:mt-4 text-sm md:text-base leading-snug'>{description}</p>
   <slot />
-</Card>
+</div>

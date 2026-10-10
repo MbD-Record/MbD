@@ -35,19 +35,10 @@ const { backToTop = false } = Astro.props;
 
 <footer class='bg-black text-white p-6'>
   <h2 class='hidden'>Footer</h2>
-  <p class='outfit'>
-    Copyright  
+  <p class='outfit text-center'>
+    Copyright
       &copy;
-      <span id="copyright">MbD Record 2018 - 
-          <script is:inline>
-            const copyright = document.getElementById('copyright');
-            if (copyright) {
-              copyright.appendChild(
-                document.createTextNode(String(new Date().getFullYear()))
-              );
-            }
-          </script>
-      </span>
+      MbD Record 2018 - {new Date().getFullYear()}
   </p>
 </footer>
 

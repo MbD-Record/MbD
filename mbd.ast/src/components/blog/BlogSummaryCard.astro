@@ -1,24 +1,24 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { Pill } from '@eliancodes/brutal-ui';
 import SummaryCard from '../generic/SummaryCard.astro';
-import { Button } from '@eliancodes/brutal-ui';
 
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
+
+const currentYear = new Date().getFullYear();
+const isCurrentYear = Number(post.slug) === currentYear;
+const label = post.data.buttonLabel ?? `Check out ${post.slug}`;
 ---
 
 <SummaryCard
   title={post.data.title}
-  imgAlt={post.data.title}
-  imgSrc={post.data.imgUrl}
-  description={post.data.description}
+  description={isCurrentYear ? 'Currently ongoing' : post.data.description}
+  variant='blog'
 >
-  <div class='flex justify-end my-4'>
-    <Button href={`/blog/${post.slug}/`}>Check it out &rarr;</Button>
+  <div class='mt-3 md:mt-4 md:flex md:justify-end'>
+    <a class='mbd-btn mbd-btn--compact text-sm md:text-base' href={`/blog/${post.slug}/`}>{label} &rarr;</a>
   </div>
-
 </SummaryCard>

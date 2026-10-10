@@ -1,28 +1,51 @@
 ---
+import { getCollection } from 'astro:content';
+import { byYearDesc } from '../../lib/entries';
+
 interface Props {
-  headings: Array<Object>;
+  headings: Array<{ depth: number; slug: string; text: string }>;
 }
 
 const { headings } = Astro.props;
+const currentSlug = Astro.params.slug;
+
+const entries = (await getCollection('blog')).sort(byYearDesc);
 ---
 
 <aside>
   <nav class='hidden lg:block sticky top-6'>
     <ul>
       {
-        headings.map((heading: any) => (
-          <li class='py-1'>
-            {[...Array(heading.depth - 1)].map((_, _i) => (
-              <span class='inline-block w-4' />
-            ))}
-            <a
-              class='hover:text-stone transition-all duration-150 ease-in-out text-dark poppins'
-              href={`#${heading.slug}`}
-            >
-              {heading.text}
-            </a>
-          </li>
-        ))
+        entries.map((entry) => {
+          const isCurrent = entry.slug === currentSlug;
+          return (
+            <li class='py-1'>
+              <a
+                class:list={[
+                  'transition-all duration-150 ease-in-out text-dark poppins hover:underline',
+                  isCurrent && 'font-bold',
+                ]}
+                href={`/blog/${entry.slug}/`}
+              >
+                {entry.data.title}
+              </a>
+              {isCurrent && headings.length > 0 && (
+                <ul>
+                  {headings.map((heading) => (
+                    <li class='py-1 pl-4'>
+                      <a
+                        class='font-bold transition-all duration-150 ease-in-out text-dark poppins hover:underline'
+                        href={`#${heading.slug}`}
+                      >
+                        {heading.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })
       }
     </ul>
   </nav>

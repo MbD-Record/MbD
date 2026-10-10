@@ -1,6 +1,7 @@
 ---
 import LocalFont from '../generic/LocalFont.astro';
 import { ViewTransitions } from 'astro:transitions';
+import { paletteScript } from '../../lib/palette';
 
 interface Props {
   title: string;
@@ -13,9 +14,10 @@ const { title, description } = Astro.props;
 ---
 
 <head>
-  <LocalFont />
   <meta charset='utf-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <script is:inline set:html={paletteScript} />
+  <LocalFont />
   <meta name='generator' content={Astro.generator} />
 
   <link rel='alternate' href='/feed.xml' type='application/rss+xml' />

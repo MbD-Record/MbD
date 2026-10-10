@@ -1,9 +1,8 @@
----
+﻿---
 title: To Do
 description: Things I still haven't listened to yet
+buttonLabel: Check out what I haven't heard yet
 pubDate: In the past
-imgUrl: '../../assets/astro.jpeg'
-layout: ../../layouts/BlogPost.astro
 ---
 
 # TO DO

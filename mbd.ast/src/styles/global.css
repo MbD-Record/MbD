@@ -119,3 +119,80 @@ html {
 {
   background-color: aliceblue;
 }
+
+/* ---- Randomised palette -------------------------------------------------
+   Colours are written onto :root at runtime by the inline script in <head>.
+   The fallbacks here are what a visitor sees if JavaScript is off.
+   Text is black everywhere: the whole palette is light enough that black is
+   always the higher-contrast choice. */
+
+.mbd-page {
+  background-color: var(--mbd-bg, #fb7185);
+  color: #000000;
+}
+
+.mbd-card {
+  color: #000000;
+  border-radius: 0.5rem;
+  border: 3px solid black;
+  filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+  padding: 1rem;
+  width: 100%;
+  transition: all;
+  transition-duration: 0.5s;
+  animation: ease-in-out;
+}
+
+/* Shrink-wrap the reading column so the nav below it can match the text width.
+   Beats UnoCSS's `.prose` max-width on specificity, so order cannot matter. */
+.mbd-page article.prose {
+  max-width: none;
+}
+
+/* Blog cards carry the whole year list, so they stay tight on small screens. */
+.mbd-card--blog {
+  padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .mbd-card--blog {
+    padding: 1rem;
+  }
+}
+
+.mbd-card:hover {
+  filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+}
+
+.mbd-card--1 { background-color: var(--mbd-1, #a78bfa); }
+.mbd-card--2 { background-color: var(--mbd-2, #4ade80); }
+.mbd-card--3 { background-color: var(--mbd-3, #facc15); }
+.mbd-card--4 { background-color: var(--mbd-4, #22d3ee); }
+.mbd-card--5 { background-color: var(--mbd-5, #c084fc); }
+
+.mbd-card--blog {
+  background-color: var(--mbd-blog, #34d399);
+}
+
+.mbd-btn {
+  background-color: #ffffff;
+  color: #000000;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
+  transition: all;
+  transition-duration: 0.5s;
+  animation: ease-in-out;
+  font-family: 'Sanchez', serif;
+}
+
+.mbd-btn:hover {
+  filter: drop-shadow(3px 3px 0 rgb(0 0 0 / 1));
+}
+
+.mbd-btn--compact {
+  padding: 0.35rem 0.6rem;
+  border-width: 2px;
+}
