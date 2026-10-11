@@ -162,9 +162,13 @@ The working directory contains a space (`Dr. COMPUTER`) and the route file is
   which Cloudflare sets at deploy. Local and CI builds emit
   `http://localhost:4321/` in `feed.xml` and the sitemap. **That is expected.**
   It also means CI cannot validate absolute URLs.
-- `mbd.ast/public/.DS_Store` is gitignored but present on disk, and `public/`
-  is copied verbatim into `dist/` on every build. Harmless, but it does mean a
-  stray file ships.
+- **`public/` is served verbatim.** Astro copies it to `dist/` root, so every
+  file there becomes a public URL. `.gitignore` does **not** protect you: it
+  governs what is committed, not what Astro copies. This repo shipped a 6 KB
+  `.DS_Store` (macOS Finder metadata, inherited from the brutal-ui template)
+  on every build for months while being correctly gitignored. CI now fails on
+  any dotfile in `dist/`. If you edit this repo from a Mac, check
+  `public/.DS_Store` does not reappear.
 - `2026-test.astro`, `artlab.astro`, `rowlab.astro` are dev-only and
   `Astro.redirect('/')` in PROD. Verified: PROD build emits a 355-byte redirect
   stub with no entry data. They still occupy routes and appear in the sitemap.

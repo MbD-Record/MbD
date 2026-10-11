@@ -76,3 +76,17 @@ jobs:
             echo "row rendering looks broken" >&2
             exit 1
           fi
+
+      - name: No stray files in the build output
+        # Astro copies public/ verbatim, so anything sitting there is served at
+        # the site root. A .gitignore entry does not help: gitignore governs what
+        # is committed, not what Astro copies. This repo picked up a 6 KB
+        # .DS_Store from the template that way and shipped it on every build.
+        run: |
+          strays=$(find dist -name '.*' -type f -not -name '.nojekyll' || true)
+          if [ -n "$strays" ]; then
+            echo "these files would be published at the site root:" >&2
+            echo "$strays" >&2
+            exit 1
+          fi
+          echo "dist is clean"
