@@ -1,0 +1,67 @@
+---
+/**
+ * One release, as a compact outlined row.
+ *
+ * Deliberately small: this sits inside a month's Albums / Tracks / Lists
+ * block and still has to read as a list. The outline is a hairline with no
+ * resting blur; `border="offset"` switches to a hard brutalist offset instead,
+ * which suits a denser list because the edges stay crisp at any radius.
+ */
+import { resolveThumb } from '../../lib/thumbnails';
+
+interface Props {
+  url: string;
+  artist?: string;
+  album?: string;
+  year?: number | string;
+  /** Outline treatment. `offset` is the hard brutalist shadow. */
+  border?: 'plain' | 'offset';
+  /** Queue tracking, e.g. "heard Oct 2026" or "todo Aug 2023 -> Oct 2026". */
+  note?: string;
+  class?: string;
+}
+
+const { url, artist, album, year, border = 'plain', note, class: className = '' } = Astro.props;
+
+const label = artist || album || url;
+const thumb = resolveThumb(url, label);
+
+// Year only repeats the heading when a row is used outside a year page, so it
+// is opt-in rather than always shown.
+const meta = year ?? '';
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={['mbd-row', border === 'offset' && 'mbd-row--offset', className]}
+>
+  {
+    thumb.kind === 'image' ? (
+      <img
+        class='mbd-row__thumb'
+        src={thumb.src}
+        alt=""
+        width={thumb.width}
+        height={thumb.height}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <span class='mbd-row__thumb flex items-center justify-center font-bold' aria-hidden='true'>
+        {thumb.letter}
+      </span>
+    )
+  }
+
+  <span class='mbd-row__label'>
+    {artist && <strong>{artist}</strong>}
+    {artist && album && ' — '}
+    {album}
+    {!artist && !album && <span class='break-all'>{url}</span>}
+  </span>
+
+  {meta && <span class='mbd-row__meta'>{meta}</span>}
+  {note && <span class='mbd-row__note'>{note}</span>}
+</a>

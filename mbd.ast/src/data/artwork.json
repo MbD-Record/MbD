@@ -1,0 +1,1615 @@
+{
+  "https://dancewiththedead.bandcamp.com/album/the-shape": {
+    "url": "https://dancewiththedead.bandcamp.com/album/the-shape",
+    "artist": "Dance With the Dead",
+    "album": "The Shape",
+    "year": 2019,
+    "art": "https://f4.bcbits.com/img/a1174174682_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/77/23/6877238d-190c-53db-9a54-20d3a029e953/mzaf_2609475070311272940.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Dance With the Dead",
+      "album": "The Shape",
+      "year": null,
+      "genre": null,
+      "link": "https://dancewiththedead.bandcamp.com/album/the-shape",
+      "score": null,
+      "pageTitle": "THE SHAPE, by DANCE WITH THE DEAD"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://chontheband.bandcamp.com/album/chon": {
+    "url": "https://chontheband.bandcamp.com/album/chon",
+    "artist": "CHON",
+    "album": "CHON",
+    "year": 2019,
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7c/92/80/7c928007-36a1-8b18-0e9c-6eef51adcf55/00810016760207_Cover.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/73/d5/fe/73d5fe4b-bd1b-312c-4bda-b610aa275637/mzaf_5193584412441660524.plus.aac.p.m4a",
+    "match": {
+      "source": "itunes",
+      "artist": "Chon",
+      "album": "Chon",
+      "year": 2019,
+      "genre": "Prog-Rock/Art Rock",
+      "link": "https://music.apple.com/us/album/chon/1817491426?uo=4",
+      "score": 1
+    },
+    "status": "ok"
+  },
+  "https://teethofthesea.bandcamp.com/album/wraith": {
+    "url": "https://teethofthesea.bandcamp.com/album/wraith",
+    "artist": "Teeth of the Sea",
+    "album": "Wraith",
+    "year": 2019,
+    "art": "https://f4.bcbits.com/img/a0527840554_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/92/ad/fa92adcd-7f49-3a98-1cbe-c5f282acd880/mzaf_9909411261612361605.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Teeth of the Sea",
+      "album": "Wraith",
+      "year": null,
+      "genre": null,
+      "link": "https://teethofthesea.bandcamp.com/album/wraith",
+      "score": null,
+      "pageTitle": "Wraith, by Teeth Of The Sea"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://bloodincantation.bandcamp.com/album/absolute-truth": {
+    "url": "https://bloodincantation.bandcamp.com/album/absolute-truth",
+    "artist": "Blood Incantation",
+    "album": "Absolute Truth",
+    "year": 2019,
+    "art": null,
+    "audio": null,
+    "match": null,
+    "status": "no-match"
+  },
+  "https://fievelisglauque.bandcamp.com/album/flaming-swords": {
+    "url": "https://fievelisglauque.bandcamp.com/album/flaming-swords",
+    "artist": "Fievel Is Glauque",
+    "album": "Flaming Swords",
+    "year": 2024,
+    "art": "https://f4.bcbits.com/img/a0845908443_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/e1/77/6e/e1776e7d-ac2a-c053-111e-58603ddbdace/mzaf_4607310432541128238.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Fievel Is Glauque",
+      "album": "Flaming Swords",
+      "year": null,
+      "genre": null,
+      "link": "https://fievelisglauque.bandcamp.com/album/flaming-swords",
+      "score": null,
+      "pageTitle": "Flaming Swords, by Fievel Is Glauque"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://www.daily.bandcamp.com": {
+    "url": "https://www.daily.bandcamp.com",
+    "artist": "Cool Pulses",
+    "album": "DEEP DARK",
+    "year": 2024,
+    "art": null,
+    "audio": null,
+    "match": null,
+    "status": "no-match"
+  },
+  "https://desperatejournalist.bandcamp.com/album/desperate-journalist": {
+    "url": "https://desperatejournalist.bandcamp.com/album/desperate-journalist",
+    "artist": "Desperate Journalist",
+    "album": "",
+    "year": 2019,
+    "art": "https://f4.bcbits.com/img/a3720643098_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c3/c9/c7/c3c9c7c8-ca1e-0fba-c34b-7b5662c5e1d6/mzaf_7088079843442818751.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Desperate Journalist",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://desperatejournalist.bandcamp.com/album/desperate-journalist",
+      "score": null,
+      "pageTitle": "Desperate Journalist, by Desperate Journalist"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://quanta-dub.bandcamp.com/album/fragmented": {
+    "url": "https://quanta-dub.bandcamp.com/album/fragmented",
+    "artist": "Quanta",
+    "album": "Fragmented",
+    "year": 2019,
+    "art": "https://f4.bcbits.com/img/a0962903254_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/db/e6/19/dbe619d4-eb63-ac43-f749-45c4ec2f4ed5/mzaf_11654579605946459218.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Quanta",
+      "album": "Fragmented",
+      "year": null,
+      "genre": null,
+      "link": "https://quanta-dub.bandcamp.com/album/fragmented",
+      "score": null,
+      "pageTitle": "Fragmented, by Quanta"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://soulglophl.bandcamp.com/album/live-wkdu": {
+    "url": "https://soulglophl.bandcamp.com/album/live-wkdu",
+    "artist": "Soul Glo",
+    "album": "Live @ WKDU",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a0975844641_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Soul Glo",
+      "album": "Live @ WKDU",
+      "year": null,
+      "genre": null,
+      "link": "https://soulglophl.bandcamp.com/album/live-wkdu",
+      "score": null,
+      "pageTitle": "Live @ WKDU, by SOUL GLO"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://wakegrind.bandcamp.com/album/devouring-ruin": {
+    "url": "https://wakegrind.bandcamp.com/album/devouring-ruin",
+    "artist": "Wake",
+    "album": "Devouring Ruin",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a2083204522_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6b/d9/b4/6bd9b4c6-f56a-9869-c647-38a8be10261a/mzaf_15905925117270433161.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Wake",
+      "album": "Devouring Ruin",
+      "year": null,
+      "genre": null,
+      "link": "https://wakegrind.bandcamp.com/album/devouring-ruin",
+      "score": null,
+      "pageTitle": "Devouring Ruin, by WAKE"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://elephant-gym.bandcamp.com/album/underwater": {
+    "url": "https://elephant-gym.bandcamp.com/album/underwater",
+    "artist": "Elephant Gym",
+    "album": "Underwater",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a1474008593_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/58/15/ec/5815ec53-b0a8-d3ce-1ae7-0ed7f420fe4e/mzaf_17187491451129961901.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Elephant Gym",
+      "album": "Underwater",
+      "year": null,
+      "genre": null,
+      "link": "https://elephant-gym.bandcamp.com/album/underwater",
+      "score": null,
+      "pageTitle": "Underwater, by Elephant Gym"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://kryptox-music.bandcamp.com/album/mathias-modica-presents-kraut-jazz-futurism-vol-2": {
+    "url": "https://kryptox-music.bandcamp.com/album/mathias-modica-presents-kraut-jazz-futurism-vol-2",
+    "artist": "Mathias Modica",
+    "album": "Kraut Jazz Futurism Vol. 2",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a0434126588_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/93/d0/8d93d079-23fc-7111-366a-9d62486975d4/mzaf_253801175644614183.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Mathias Modica",
+      "album": "Kraut Jazz Futurism Vol. 2",
+      "year": null,
+      "genre": null,
+      "link": "https://kryptox-music.bandcamp.com/album/mathias-modica-presents-kraut-jazz-futurism-vol-2",
+      "score": null,
+      "pageTitle": "Mathias Modica presents Kraut Jazz Futurism Vol 2, by Kryptox"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://contrasttrio.bandcamp.com/album/letila-zozulya": {
+    "url": "https://contrasttrio.bandcamp.com/album/letila-zozulya",
+    "artist": "Contrast Trio",
+    "album": "Letila Zozulya",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a3821487313_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/aa/74/e0/aa74e079-9aab-2218-6b23-86e8f3e56e2d/mzaf_9724738058046670669.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Contrast Trio",
+      "album": "Letila Zozulya",
+      "year": null,
+      "genre": null,
+      "link": "https://contrasttrio.bandcamp.com/album/letila-zozulya",
+      "score": null,
+      "pageTitle": "Letila Zozulya, by Contrast Trio"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://slothrust.bandcamp.com/album/parallel-timeline": {
+    "url": "https://slothrust.bandcamp.com/album/parallel-timeline",
+    "artist": "Slothrust",
+    "album": "Parallel Timeline",
+    "year": 2021,
+    "art": "https://f4.bcbits.com/img/a3255233579_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/00/4e/23/004e2358-b990-1b80-f600-8d9bd7e9be4c/mzaf_17331034323213233656.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Slothrust",
+      "album": "Parallel Timeline",
+      "year": null,
+      "genre": null,
+      "link": "https://slothrust.bandcamp.com/album/parallel-timeline",
+      "score": null,
+      "pageTitle": "Parallel Timeline, by SLOTHRUST"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://kinkajous.bandcamp.com/album/nothing-will-disappear": {
+    "url": "https://kinkajous.bandcamp.com/album/nothing-will-disappear",
+    "artist": "Kinkajous",
+    "album": "Nothing Will Disappear",
+    "year": 2024,
+    "art": "https://coverartarchive.org/release/7d3f00c8-49bd-4776-b0eb-ffb973fe0482/39084173211-500.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/73/d0/5473d07f-d7f2-cc13-9bef-e173fa25682d/mzaf_16350481854248928379.plus.aac.p.m4a",
+    "match": {
+      "source": "itunes",
+      "artist": "Kinkajous",
+      "album": "Nothing Will Disappear",
+      "year": 2024,
+      "genre": "Crossover Jazz",
+      "link": "https://music.apple.com/us/album/nothing-will-disappear/1751654655?uo=4",
+      "score": 1
+    },
+    "status": "ok (CAA art)"
+  },
+  "https://keygenchurch.bandcamp.com/album/tenebre-rosso-sangue": {
+    "url": "https://keygenchurch.bandcamp.com/album/tenebre-rosso-sangue",
+    "artist": "Keygen Church",
+    "album": "Tenebre Rosso Sangue",
+    "year": 2024,
+    "art": "https://f4.bcbits.com/img/a0375793902_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/59/9a/18599a93-ce62-602f-9608-1c7f6f4bff30/mzaf_15195450492092563136.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Keygen Church",
+      "album": "Tenebre Rosso Sangue",
+      "year": null,
+      "genre": null,
+      "link": "https://keygenchurch.bandcamp.com/album/tenebre-rosso-sangue",
+      "score": null,
+      "pageTitle": "Tenebre Rosso Sangue, by KEYGEN CHURCH"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://wearestereofox.bandcamp.com/album/up-all-night": {
+    "url": "https://wearestereofox.bandcamp.com/album/up-all-night",
+    "artist": "Nuncc, AK420",
+    "album": "Up All Night",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1427935855_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/93/2e/d4932e8d-5ddb-5808-45e3-e43a2e0af15f/mzaf_7251149157091396966.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Nuncc, AK420",
+      "album": "Up All Night",
+      "year": null,
+      "genre": null,
+      "link": "https://wearestereofox.bandcamp.com/album/up-all-night",
+      "score": null,
+      "pageTitle": "Up All Night, by Nuncc, AK420"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://100percentsilk.bandcamp.com/album/late-shift-silk": {
+    "url": "https://100percentsilk.bandcamp.com/album/late-shift-silk",
+    "artist": "100% Silk",
+    "album": "Late Shift Silk",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0422456191_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8b/16/74/8b1674c1-d98e-9ff1-d9d8-429d94de71b9/mzaf_11019675327881449200.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "100% Silk",
+      "album": "Late Shift Silk",
+      "year": null,
+      "genre": null,
+      "link": "https://100percentsilk.bandcamp.com/album/late-shift-silk",
+      "score": null,
+      "pageTitle": "Late Shift Silk, by 100% Silk"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://arcologies.bandcamp.com/album/vapor-drive": {
+    "url": "https://arcologies.bandcamp.com/album/vapor-drive",
+    "artist": "Arcologies",
+    "album": "Vapor Drive",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0601220428_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Arcologies",
+      "album": "Vapor Drive",
+      "year": null,
+      "genre": null,
+      "link": "https://arcologies.bandcamp.com/album/vapor-drive",
+      "score": null,
+      "pageTitle": "VAPOR DRIVE, by arcologies"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://sorrowgarage.bandcamp.com/album/unrequited": {
+    "url": "https://sorrowgarage.bandcamp.com/album/unrequited",
+    "artist": "Sorrow",
+    "album": "Unrequited",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0020175192_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/7d/ba/cf7dbae1-d002-75ea-f749-a1414475ffd8/mzaf_3009426850818892934.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Sorrow",
+      "album": "Unrequited",
+      "year": null,
+      "genre": null,
+      "link": "https://sorrowgarage.bandcamp.com/album/unrequited",
+      "score": null,
+      "pageTitle": "Unrequited, by Sorrow"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://glassbeams.bandcamp.com/album/mahal": {
+    "url": "https://glassbeams.bandcamp.com/album/mahal",
+    "artist": "Glass Beams",
+    "album": "Mahal EP",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2967668498_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/68/36/9b/68369be9-9ab7-8950-c7a3-7cc3f33fb58c/mzaf_18330093126090432080.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Glass Beams",
+      "album": "Mahal EP",
+      "year": null,
+      "genre": null,
+      "link": "https://glassbeams.bandcamp.com/album/mahal",
+      "score": null,
+      "pageTitle": "Mahal, by Glass Beams"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://slowerpace.bandcamp.com/album/ep-2": {
+    "url": "https://slowerpace.bandcamp.com/album/ep-2",
+    "artist": "Slowerpace",
+    "album": "('arabic words' EP)",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0420439643_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Slowerpace",
+      "album": "('arabic words' EP)",
+      "year": null,
+      "genre": null,
+      "link": "https://slowerpace.bandcamp.com/album/ep-2",
+      "score": null,
+      "pageTitle": "مشاغبون EP, by slowerpace 音楽"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://spotlights.bandcamp.com/album/alchemy-for-the-dead": {
+    "url": "https://spotlights.bandcamp.com/album/alchemy-for-the-dead",
+    "artist": "Spotlights",
+    "album": "Alchemy for the Dead",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2787915887_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/8a/67/b28a67f0-5a53-31a9-266c-3f2ec2720e4a/mzaf_10353870156011555311.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Spotlights",
+      "album": "Alchemy for the Dead",
+      "year": null,
+      "genre": null,
+      "link": "https://spotlights.bandcamp.com/album/alchemy-for-the-dead",
+      "score": null,
+      "pageTitle": "Alchemy For The Dead, by Spotlights"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://impurewilhelmina.bandcamp.com/album/radiation": {
+    "url": "https://impurewilhelmina.bandcamp.com/album/radiation",
+    "artist": "Impure Wilhelmina",
+    "album": "Radiation",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1487186512_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6e/2f/ca/6e2fca44-217c-0864-5960-5e89dce8cfa0/mzaf_275577576398477741.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Impure Wilhelmina",
+      "album": "Radiation",
+      "year": null,
+      "genre": null,
+      "link": "https://impurewilhelmina.bandcamp.com/album/radiation",
+      "score": null,
+      "pageTitle": "Radiation, by Impure Wilhelmina"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://genomrecords.bandcamp.com/album/passivity-ep": {
+    "url": "https://genomrecords.bandcamp.com/album/passivity-ep",
+    "artist": "haircuts for men",
+    "album": "Passivity EP",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3951677387_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "haircuts for men",
+      "album": "Passivity EP",
+      "year": null,
+      "genre": null,
+      "link": "https://genomrecords.bandcamp.com/album/passivity-ep",
+      "score": null,
+      "pageTitle": "Passivity EP, by haircuts for men"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://martinatopleybird.bandcamp.com/track/solitude": {
+    "url": "https://martinatopleybird.bandcamp.com/track/solitude",
+    "artist": "Martina Topley Bird",
+    "album": "Solidtude",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2188194253_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/66/91/e4669144-5676-1686-8dca-096de513c63e/mzaf_11964265653075276084.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Martina Topley Bird",
+      "album": "Solidtude",
+      "year": null,
+      "genre": null,
+      "link": "https://martinatopleybird.bandcamp.com/track/solitude",
+      "score": null,
+      "pageTitle": "Solitude, by Martina Topley Bird"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://sistersrock.bandcamp.com/album/leecheater": {
+    "url": "https://sistersrock.bandcamp.com/album/leecheater",
+    "artist": "Sisters Rock",
+    "album": "Leecheater",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0745537428_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/0a/73/b2/0a73b253-1fee-d28f-614a-22b8c8201fcf/mzaf_16572548020686386596.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Sisters Rock",
+      "album": "Leecheater",
+      "year": null,
+      "genre": null,
+      "link": "https://sistersrock.bandcamp.com/album/leecheater",
+      "score": null,
+      "pageTitle": "Leecheater, by SISTERS"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://unbroken.bandcamp.com/album/life-love-regret": {
+    "url": "https://unbroken.bandcamp.com/album/life-love-regret",
+    "artist": "Unbroken",
+    "album": "Life. Love. Regret.",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3822529104_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/54/5a/9a/545a9a52-d7e9-4a18-fc8c-db43e2c49ad4/mzaf_4339882405481088495.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Unbroken",
+      "album": "Life. Love. Regret.",
+      "year": null,
+      "genre": null,
+      "link": "https://unbroken.bandcamp.com/album/life-love-regret",
+      "score": null,
+      "pageTitle": "Life. Love. Regret., by Unbroken"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://knifedetroit.bandcamp.com/album/knife": {
+    "url": "https://knifedetroit.bandcamp.com/album/knife",
+    "artist": "Knife Detroit",
+    "album": "Knife",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2670038458_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c9/cd/9d/c9cd9d52-9b3e-bec5-4fc6-4d810b0578b3/mzaf_3824535142643834729.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Knife Detroit",
+      "album": "Knife",
+      "year": null,
+      "genre": null,
+      "link": "https://knifedetroit.bandcamp.com/album/knife",
+      "score": null,
+      "pageTitle": "Knife, by Knife"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://aslivingarrows.bandcamp.com/album/hope-and-ruin": {
+    "url": "https://aslivingarrows.bandcamp.com/album/hope-and-ruin",
+    "artist": "As Living Arrows",
+    "album": "Hope And Ruin",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1229192847_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/75/fe/b775feef-4be8-b75e-69c9-dedccbb3da38/mzaf_13515915026608190202.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "As Living Arrows",
+      "album": "Hope And Ruin",
+      "year": null,
+      "genre": null,
+      "link": "https://aslivingarrows.bandcamp.com/album/hope-and-ruin",
+      "score": null,
+      "pageTitle": "Hope and Ruin, by As Living Arrows"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://gospel.bandcamp.com/album/the-loser": {
+    "url": "https://gospel.bandcamp.com/album/the-loser",
+    "artist": "Gospel",
+    "album": "The Loser",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1281987747_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/fc/f6/d0fcf6c8-79ba-6a73-15b4-048c4d37aafd/mzaf_4543204994183119257.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Gospel",
+      "album": "The Loser",
+      "year": null,
+      "genre": null,
+      "link": "https://gospel.bandcamp.com/album/the-loser",
+      "score": null,
+      "pageTitle": "The Loser, by Gospel"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://archive.org/details/@jbintner0947": {
+    "url": "https://archive.org/details/@jbintner0947",
+    "artist": "TheMyspaceArchiveProject",
+    "album": "",
+    "year": null,
+    "art": null,
+    "audio": null,
+    "match": null,
+    "status": "no-match"
+  },
+  "https://metalheadz.bandcamp.com/album/opal-soosay": {
+    "url": "https://metalheadz.bandcamp.com/album/opal-soosay",
+    "artist": "Grey Code",
+    "album": "Opal/Soosay",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0831266484_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/d1/c3/a5d1c310-6a5b-1d7a-d1e6-c5f7f5f8c30d/mzaf_13554345527758225479.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Grey Code",
+      "album": "Opal/Soosay",
+      "year": null,
+      "genre": null,
+      "link": "https://metalheadz.bandcamp.com/album/opal-soosay",
+      "score": null,
+      "pageTitle": "Opal / Soosay, by Grey Code"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://infreerecords.bandcamp.com/album/karmacipher-introspectrum": {
+    "url": "https://infreerecords.bandcamp.com/album/karmacipher-introspectrum",
+    "artist": "Karmacipher",
+    "album": "Introspectrum",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0326659227_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/05/7f/0f/057f0fdc-7352-38b4-0cf5-7e0b77742858/mzaf_9951261676232565868.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Karmacipher",
+      "album": "Introspectrum",
+      "year": null,
+      "genre": null,
+      "link": "https://infreerecords.bandcamp.com/album/karmacipher-introspectrum",
+      "score": null,
+      "pageTitle": "KARMACIPHER - Introspectrum, by Karmacipher"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://skingraftrecords.bandcamp.com/album/7-toku": {
+    "url": "https://skingraftrecords.bandcamp.com/album/7-toku",
+    "artist": "Space Streakings",
+    "album": "7 Toku",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a4166464549_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music49/v4/6e/4c/22/6e4c2283-7b3e-71ee-a0f0-02a474b5262a/mzaf_829412944080817802.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Space Streakings",
+      "album": "7 Toku",
+      "year": null,
+      "genre": null,
+      "link": "https://skingraftrecords.bandcamp.com/album/7-toku",
+      "score": null,
+      "pageTitle": "7-Toku, by Space Streakings"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://sneakerpimps.bandcamp.com/album/squaring-the-circle": {
+    "url": "https://sneakerpimps.bandcamp.com/album/squaring-the-circle",
+    "artist": "Sneaker Pimps",
+    "album": "Squaring the Circle",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3619852482_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/17/08/9517085c-8296-8b22-10f5-d0bf89e6e6e0/mzaf_13352099164340630521.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Sneaker Pimps",
+      "album": "Squaring the Circle",
+      "year": null,
+      "genre": null,
+      "link": "https://sneakerpimps.bandcamp.com/album/squaring-the-circle",
+      "score": null,
+      "pageTitle": "Squaring The Circle, by Sneaker Pimps"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://martinatopleybird.bandcamp.com/album/forever-i-wait": {
+    "url": "https://martinatopleybird.bandcamp.com/album/forever-i-wait",
+    "artist": "Martina Topley-Bird",
+    "album": "Forever I Wait",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2305308316_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f9/73/2e/f9732e90-c89c-bd32-9c90-e82dab15b56f/mzaf_17369469638553240153.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Martina Topley-Bird",
+      "album": "Forever I Wait",
+      "year": null,
+      "genre": null,
+      "link": "https://martinatopleybird.bandcamp.com/album/forever-i-wait",
+      "score": null,
+      "pageTitle": "Forever I Wait, by Martina Topley Bird"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://echt.bandcamp.com/album/inwane": {
+    "url": "https://echt.bandcamp.com/album/inwane",
+    "artist": "ECHT!",
+    "album": "Inwane",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2803176112_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/9d/d1/a79dd15d-ce3b-9b15-26ac-077ffc84d7cb/mzaf_9224604321563318532.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "ECHT!",
+      "album": "Inwane",
+      "year": null,
+      "genre": null,
+      "link": "https://echt.bandcamp.com/album/inwane",
+      "score": null,
+      "pageTitle": "INWANE, by ECHT!"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://stuffmusic.bandcamp.com/album/t-h-reats-2": {
+    "url": "https://stuffmusic.bandcamp.com/album/t-h-reats-2",
+    "artist": "STUFF.",
+    "album": "T(h)reats",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0149404201_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b9/ed/13/b9ed13f5-907a-8b20-914d-ec204d439dde/mzaf_4332493498561330799.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "STUFF.",
+      "album": "T(h)reats",
+      "year": null,
+      "genre": null,
+      "link": "https://stuffmusic.bandcamp.com/album/t-h-reats-2",
+      "score": null,
+      "pageTitle": "T(h)reats, by STUFF."
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://caryout.bandcamp.com/album/rhodes-ahead-vol-1": {
+    "url": "https://caryout.bandcamp.com/album/rhodes-ahead-vol-1",
+    "artist": "Marc Carey",
+    "album": "Rhodes Ahead",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3226407013_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Marc Carey",
+      "album": "Rhodes Ahead",
+      "year": null,
+      "genre": null,
+      "link": "https://caryout.bandcamp.com/album/rhodes-ahead-vol-1",
+      "score": null,
+      "pageTitle": "Rhodes Ahead Vol. 1, by Marc Cary"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://nicksena.bandcamp.com/album/hikikomori-lake": {
+    "url": "https://nicksena.bandcamp.com/album/hikikomori-lake",
+    "artist": "Nick Sena",
+    "album": "Hikikomori Lake",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3580899183_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/db/6b/5c/db6b5c4d-6719-f668-6979-583f8699c883/mzaf_5684460842397936132.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Nick Sena",
+      "album": "Hikikomori Lake",
+      "year": null,
+      "genre": null,
+      "link": "https://nicksena.bandcamp.com/album/hikikomori-lake",
+      "score": null,
+      "pageTitle": "Hikikomori Lake, by Nick Sena"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://bandlerchingbe.bandcamp.com/album/sub-surface": {
+    "url": "https://bandlerchingbe.bandcamp.com/album/sub-surface",
+    "artist": "Bandler Ching",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0298549890_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/db/ad/c0dbadef-cdf4-a351-7531-7f5b56b433e2/mzaf_2424737802448109717.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Bandler Ching",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://bandlerchingbe.bandcamp.com/album/sub-surface",
+      "score": null,
+      "pageTitle": "Sub Surface, by Bandler Ching"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://velstrio.bandcamp.com/album/yellow-ochre-official-reissue": {
+    "url": "https://velstrio.bandcamp.com/album/yellow-ochre-official-reissue",
+    "artist": "Vels Trio",
+    "album": "Yellow Ochre",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2766355815_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5f/a5/7e/5fa57e5b-542d-0feb-fd15-9e0e2b22b5be/mzaf_3685644691859428222.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Vels Trio",
+      "album": "Yellow Ochre",
+      "year": null,
+      "genre": null,
+      "link": "https://velstrio.bandcamp.com/album/yellow-ochre-official-reissue",
+      "score": null,
+      "pageTitle": "Yellow Ochre [Official Reissue], by Vels Trio"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://damuthefudgemunk.bandcamp.com/album/conversation-peace": {
+    "url": "https://damuthefudgemunk.bandcamp.com/album/conversation-peace",
+    "artist": "Damu the Fudgemonk",
+    "album": "Conversation Peace",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2997835772_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/12/6e/7b/126e7b62-a34a-c027-1eae-dac73f8109e9/mzaf_15472991847952482543.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Damu the Fudgemonk",
+      "album": "Conversation Peace",
+      "year": null,
+      "genre": null,
+      "link": "https://damuthefudgemunk.bandcamp.com/album/conversation-peace",
+      "score": null,
+      "pageTitle": "Conversation Peace, by Damu The Fudgemunk"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://nalasinephro.bandcamp.com/album/space-18": {
+    "url": "https://nalasinephro.bandcamp.com/album/space-18",
+    "artist": "Nala Sinephro",
+    "album": "Space 1.8",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2701684768_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/40/f2/a1/40f2a19b-aad9-9e5e-eedc-6b25ebe9625f/mzaf_9637261136044535168.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Nala Sinephro",
+      "album": "Space 1.8",
+      "year": null,
+      "genre": null,
+      "link": "https://nalasinephro.bandcamp.com/album/space-18",
+      "score": null,
+      "pageTitle": "Space 1.8, by Nala Sinephro"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://justusrecords.bandcamp.com/album/satori": {
+    "url": "https://justusrecords.bandcamp.com/album/satori",
+    "artist": "Kraig Kilby",
+    "album": "Satori",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2754864531_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/7c/d6/6f/mzm.osehepjc.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Kraig Kilby",
+      "album": "Satori",
+      "year": null,
+      "genre": null,
+      "link": "https://justusrecords.bandcamp.com/album/satori",
+      "score": null,
+      "pageTitle": "Satori, by Kraig Kilby"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://knkjs.bandcamp.com/album/being-waves": {
+    "url": "https://knkjs.bandcamp.com/album/being-waves",
+    "artist": "Kinkajous",
+    "album": "Being Waves",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1697722401_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c0/df/39/c0df39b2-3694-6d8b-765b-f894a69b4230/mzaf_10237169673096616989.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Kinkajous",
+      "album": "Being Waves",
+      "year": null,
+      "genre": null,
+      "link": "https://knkjs.bandcamp.com/album/being-waves",
+      "score": null,
+      "pageTitle": "Being Waves, by Kinkajous"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://daily.bandcamp.com/scene-report/belgian-rock-scene-report": {
+    "url": "https://daily.bandcamp.com/scene-report/belgian-rock-scene-report",
+    "artist": "Belgian Rock Scene Feature",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/0026059692_171.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Belgian Rock Scene Feature",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://daily.bandcamp.com/scene-report/belgian-rock-scene-report",
+      "score": null,
+      "pageTitle": "A Guide to the Vibrant Young Belgian Rock Scene"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://billlaswell.bandcamp.com/album/too-much-sugar-for-a-dime": {
+    "url": "https://billlaswell.bandcamp.com/album/too-much-sugar-for-a-dime",
+    "artist": "Henry Threadgill",
+    "album": "Too Much Sugar for a Dime",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2434711102_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/b1/ed/bbb1edf6-051f-68c2-4ce9-87b54e6d3c17/mzaf_12981940307386856091.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Henry Threadgill",
+      "album": "Too Much Sugar for a Dime",
+      "year": null,
+      "genre": null,
+      "link": "https://billlaswell.bandcamp.com/album/too-much-sugar-for-a-dime",
+      "score": null,
+      "pageTitle": "Too Much Sugar for a Dime, by Henry Threadgill"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://gas-lab.bandcamp.com/album/blue-room": {
+    "url": "https://gas-lab.bandcamp.com/album/blue-room",
+    "artist": "Gas-Lab",
+    "album": "Blue Room",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2315875599_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/99/8d/7e/998d7e2d-26aa-239e-17ae-431423cd5d3d/mzaf_13681692700230382918.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Gas-Lab",
+      "album": "Blue Room",
+      "year": null,
+      "genre": null,
+      "link": "https://gas-lab.bandcamp.com/album/blue-room",
+      "score": null,
+      "pageTitle": "Blue Room, by Gas-Lab"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://fanu.bandcamp.com/album/adventures-in-imperfection-3": {
+    "url": "https://fanu.bandcamp.com/album/adventures-in-imperfection-3",
+    "artist": "FatGuyver",
+    "album": "Adventures in Imperfection",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3381065585_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "FatGuyver",
+      "album": "Adventures in Imperfection",
+      "year": null,
+      "genre": null,
+      "link": "https://fanu.bandcamp.com/album/adventures-in-imperfection-3",
+      "score": null,
+      "pageTitle": "Adventures In Imperfection, by FatGyver"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://roninrhythmrecords.bandcamp.com/album/loom": {
+    "url": "https://roninrhythmrecords.bandcamp.com/album/loom",
+    "artist": "KALI Trio",
+    "album": "LOOM",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0383954984_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/f1/98/c6/f198c6a6-b602-f6a9-cc20-60a82885c636/mzaf_13504748803794608864.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "KALI Trio",
+      "album": "LOOM",
+      "year": null,
+      "genre": null,
+      "link": "https://roninrhythmrecords.bandcamp.com/album/loom",
+      "score": null,
+      "pageTitle": "LOOM, by KALI Trio"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://pereraelsewhere.bandcamp.com/album/drive-ep": {
+    "url": "https://pereraelsewhere.bandcamp.com/album/drive-ep",
+    "artist": "Perera Elsewhere",
+    "album": "Drive EP",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3349259436_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/30/03/47/300347b0-7d24-b399-ad0c-f529fd701a6b/mzaf_3675794704269012826.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Perera Elsewhere",
+      "album": "Drive EP",
+      "year": null,
+      "genre": null,
+      "link": "https://pereraelsewhere.bandcamp.com/album/drive-ep",
+      "score": null,
+      "pageTitle": "Drive EP, by Perera Elsewhere"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://davederosemusic.bandcamp.com/album/bloom-anubis": {
+    "url": "https://davederosemusic.bandcamp.com/album/bloom-anubis",
+    "artist": "Agile Experiments",
+    "album": "Bloom Anubis",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1437190439_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Agile Experiments",
+      "album": "Bloom Anubis",
+      "year": null,
+      "genre": null,
+      "link": "https://davederosemusic.bandcamp.com/album/bloom-anubis",
+      "score": null,
+      "pageTitle": "Bloom Anubis, by Agile Experiments"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://otik.bandcamp.com/album/quarter-truth": {
+    "url": "https://otik.bandcamp.com/album/quarter-truth",
+    "artist": "Otik",
+    "album": "Quarter Truth",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2520883600_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Otik",
+      "album": "Quarter Truth",
+      "year": null,
+      "genre": null,
+      "link": "https://otik.bandcamp.com/album/quarter-truth",
+      "score": null,
+      "pageTitle": "Quarter Truth, by Otik"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://canape-records.bandcamp.com/track/mdntrdrz": {
+    "url": "https://canape-records.bandcamp.com/track/mdntrdrz",
+    "artist": "Big Kick Energy & Daddy Hyphen",
+    "album": "MNDTRNRZ",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2085356671_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Big Kick Energy & Daddy Hyphen",
+      "album": "MNDTRNRZ",
+      "year": null,
+      "genre": null,
+      "link": "https://canape-records.bandcamp.com/track/mdntrdrz",
+      "score": null,
+      "pageTitle": "MDNTRDRZ, by Daddy Hyphen"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://mouseonmars.bandcamp.com/album/dimensional-people": {
+    "url": "https://mouseonmars.bandcamp.com/album/dimensional-people",
+    "artist": "Mouse on Mars",
+    "album": "Dimensional People",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3074681335_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ca/e0/55/cae0555d-b057-ddca-4505-b20ae345dad5/mzaf_4309629529995755577.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Mouse on Mars",
+      "album": "Dimensional People",
+      "year": null,
+      "genre": null,
+      "link": "https://mouseonmars.bandcamp.com/album/dimensional-people",
+      "score": null,
+      "pageTitle": "Dimensional People, by Mouse on Mars"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://veyl.bandcamp.com/album/body-count": {
+    "url": "https://veyl.bandcamp.com/album/body-count",
+    "artist": "Maenad Veyl",
+    "album": "Body Count",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2461250066_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/87/70/79/8770795e-8a72-5b3d-7ae1-cf26cb594958/mzaf_18269679153728953290.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Maenad Veyl",
+      "album": "Body Count",
+      "year": null,
+      "genre": null,
+      "link": "https://veyl.bandcamp.com/album/body-count",
+      "score": null,
+      "pageTitle": "Body Count, by Maenad Veyl"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://daxpierson.bandcamp.com/album/nerve-bumps-a-queer-divine-dissatisfaction": {
+    "url": "https://daxpierson.bandcamp.com/album/nerve-bumps-a-queer-divine-dissatisfaction",
+    "artist": "Dax Pierson",
+    "album": "Nerve Bumps",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2059251962_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6f/61/ab/6f61ab7c-fb90-f672-fa00-444943136027/mzaf_16075198141110478555.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Dax Pierson",
+      "album": "Nerve Bumps",
+      "year": null,
+      "genre": null,
+      "link": "https://daxpierson.bandcamp.com/album/nerve-bumps-a-queer-divine-dissatisfaction",
+      "score": null,
+      "pageTitle": "Nerve Bumps (A Queer Divine Dissatisfaction), by Dax Pierson"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://layalechaker.bandcamp.com/album/inner-rhyme-icr011-layale-chaker-sarafand": {
+    "url": "https://layalechaker.bandcamp.com/album/inner-rhyme-icr011-layale-chaker-sarafand",
+    "artist": "Layale Chaker",
+    "album": "Inner Rhyme",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a4111374113_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/31/0a/6f/310a6f6a-89e3-0fc9-a525-4eed023b4b88/mzaf_14272740399249930481.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Layale Chaker",
+      "album": "Inner Rhyme",
+      "year": null,
+      "genre": null,
+      "link": "https://layalechaker.bandcamp.com/album/inner-rhyme-icr011-layale-chaker-sarafand",
+      "score": null,
+      "pageTitle": "Inner Rhyme (ICR011) Layale Chaker & Sarafand, by Layale Chaker"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://nerve.bandcamp.com/album/ep5": {
+    "url": "https://nerve.bandcamp.com/album/ep5",
+    "artist": "Nerve",
+    "album": "EP5",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2996514997_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/47/14/2f47141a-2239-3bbc-e085-1208ea964caf/mzaf_6243444704919447336.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Nerve",
+      "album": "EP5",
+      "year": null,
+      "genre": null,
+      "link": "https://nerve.bandcamp.com/album/ep5",
+      "score": null,
+      "pageTitle": "EP5, by Nerve"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://somtheband.bandcamp.com/album/awake": {
+    "url": "https://somtheband.bandcamp.com/album/awake",
+    "artist": "SOM",
+    "album": "Awake",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1980680120_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/63/ac/c0/63acc00a-ce21-ee80-7785-aa84d782ffd1/mzaf_15422231865325248746.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "SOM",
+      "album": "Awake",
+      "year": null,
+      "genre": null,
+      "link": "https://somtheband.bandcamp.com/album/awake",
+      "score": null,
+      "pageTitle": "Awake, by SOM"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://dramon.bandcamp.com/album/spero": {
+    "url": "https://dramon.bandcamp.com/album/spero",
+    "artist": "Dramón",
+    "album": "Àspero",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3450220675_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/8c/56/6b/8c566b26-b427-cb18-6cfa-57d187b808ed/mzaf_2551858613235479822.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Dramón",
+      "album": "Àspero",
+      "year": null,
+      "genre": null,
+      "link": "https://dramon.bandcamp.com/album/spero",
+      "score": null,
+      "pageTitle": "Àspero, by Dramón"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://oldgods.bandcamp.com/album/old-gods": {
+    "url": "https://oldgods.bandcamp.com/album/old-gods",
+    "artist": "Old Gods",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2633695197_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/9d/a6/089da643-1633-4d87-aa00-172866312147/mzaf_9289224769632485306.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Old Gods",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://oldgods.bandcamp.com/album/old-gods",
+      "score": null,
+      "pageTitle": "Old Gods, by Old Gods"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://analogicalforce.bandcamp.com/album/af032-monega-ep": {
+    "url": "https://analogicalforce.bandcamp.com/album/af032-monega-ep",
+    "artist": "dgoHn",
+    "album": "Monega EP",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0983745036_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/99/f6/09/99f60964-4538-93e5-b941-4f573dd90d16/mzaf_13725332792487914826.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "dgoHn",
+      "album": "Monega EP",
+      "year": null,
+      "genre": null,
+      "link": "https://analogicalforce.bandcamp.com/album/af032-monega-ep",
+      "score": null,
+      "pageTitle": "[AF032] Monega EP, by dgoHn"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://non-serviam.bandcamp.com/music": {
+    "url": "https://non-serviam.bandcamp.com/music",
+    "artist": "Non Serviam",
+    "album": "Le Coeur Bat",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/0046589960_23.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9a/62/ba/9a62ba95-f9a9-8e87-8c30-e83eb16732f8/mzaf_5697921889194338684.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Non Serviam",
+      "album": "Le Coeur Bat",
+      "year": null,
+      "genre": null,
+      "link": "https://non-serviam.bandcamp.com/music",
+      "score": null,
+      "pageTitle": "Non Serviam"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://grimestone.bandcamp.com/album/old-nick-a-new-generation-of-vampiric-conspiracies": {
+    "url": "https://grimestone.bandcamp.com/album/old-nick-a-new-generation-of-vampiric-conspiracies",
+    "artist": "Old Nick",
+    "album": "A New Generation Of Vampiric Conspiracies",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3166996878_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/25/11/91/25119191-4e25-c511-d723-d4194a313bae/mzaf_378796629734029899.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Old Nick",
+      "album": "A New Generation Of Vampiric Conspiracies",
+      "year": null,
+      "genre": null,
+      "link": "https://grimestone.bandcamp.com/album/old-nick-a-new-generation-of-vampiric-conspiracies",
+      "score": null,
+      "pageTitle": "Old Nick - A New Generation Of Vampiric Conspiracies, by Old Nick"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://blackwingisdoomed.bandcamp.com/album/no-moon": {
+    "url": "https://blackwingisdoomed.bandcamp.com/album/no-moon",
+    "artist": "Black Wing",
+    "album": "No Moon",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0327304830_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ba/fc/f0/bafcf081-0b3f-1f2f-3e6c-1a03ac454e95/mzaf_2551165518000345869.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Black Wing",
+      "album": "No Moon",
+      "year": null,
+      "genre": null,
+      "link": "https://blackwingisdoomed.bandcamp.com/album/no-moon",
+      "score": null,
+      "pageTitle": "No Moon, by Black Wing"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://pryapisme.bandcamp.com/album/diabolicus-felinae-pandemonium": {
+    "url": "https://pryapisme.bandcamp.com/album/diabolicus-felinae-pandemonium",
+    "artist": "Priapisme",
+    "album": "Diabolicus Felinae",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2997653943_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Priapisme",
+      "album": "Diabolicus Felinae",
+      "year": null,
+      "genre": null,
+      "link": "https://pryapisme.bandcamp.com/album/diabolicus-felinae-pandemonium",
+      "score": null,
+      "pageTitle": "Diabolicus Felinae Pandemonium, by Pryapisme"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://superheavymetal.bandcamp.com/album/gong-splash-midi-midi": {
+    "url": "https://superheavymetal.bandcamp.com/album/gong-splash-midi-midi",
+    "artist": "Super Heavy Metal",
+    "album": "Gong Splash Midi Midi",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3247217025_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/0f/29/e30f299b-31d3-64ea-c451-31c1350f3b53/mzaf_16055022578639667840.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Super Heavy Metal",
+      "album": "Gong Splash Midi Midi",
+      "year": null,
+      "genre": null,
+      "link": "https://superheavymetal.bandcamp.com/album/gong-splash-midi-midi",
+      "score": null,
+      "pageTitle": "Gong Splash Midi Midi, by Super Heavy Metal"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://billlaswell.bandcamp.com/album/asana": {
+    "url": "https://billlaswell.bandcamp.com/album/asana",
+    "artist": "Bill Laswell",
+    "album": "Asana 1 + 2",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1463893228_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Bill Laswell",
+      "album": "Asana 1 + 2",
+      "year": null,
+      "genre": null,
+      "link": "https://billlaswell.bandcamp.com/album/asana",
+      "score": null,
+      "pageTitle": "Asana, by Bill Laswell"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://fourtet.bandcamp.com/album/pink": {
+    "url": "https://fourtet.bandcamp.com/album/pink",
+    "artist": "Four Tet",
+    "album": "Pink",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3079199274_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/ae/23/0fae23e7-f112-1931-720f-4d0221431066/mzaf_15826420763191540626.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Four Tet",
+      "album": "Pink",
+      "year": null,
+      "genre": null,
+      "link": "https://fourtet.bandcamp.com/album/pink",
+      "score": null,
+      "pageTitle": "Pink, by Four Tet"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://squarepusher.bandcamp.com/album/hard-normal-daddy": {
+    "url": "https://squarepusher.bandcamp.com/album/hard-normal-daddy",
+    "artist": "Squarepusher",
+    "album": "Hard Normal Daddy",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1296597700_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/aa/28/3aaa28f7-8b1e-fc77-ef37-121e377e6616/mzaf_8654171252692803923.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Squarepusher",
+      "album": "Hard Normal Daddy",
+      "year": null,
+      "genre": null,
+      "link": "https://squarepusher.bandcamp.com/album/hard-normal-daddy",
+      "score": null,
+      "pageTitle": "Hard Normal Daddy, by Squarepusher"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://www.youtube.com/results?search_query=Lindstrom+Prins+Thomas+II+III": {
+    "url": "https://www.youtube.com/results?search_query=Lindstrom+Prins+Thomas+II+III",
+    "artist": "Lindstrom and Prins Thomas",
+    "album": "II and III",
+    "year": null,
+    "art": null,
+    "audio": null,
+    "match": null,
+    "status": "no-match"
+  },
+  "https://www.youtube.com/results?search_query=Flower+Travellin%27+Band+Satori+full+album": {
+    "url": "https://www.youtube.com/results?search_query=Flower+Travellin%27+Band+Satori+full+album",
+    "artist": "Flower Travelin' Band",
+    "album": "Satori",
+    "year": null,
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music/3d/9a/14/mzi.hpimxnhw.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9c/58/4a/9c584af5-96f3-4a35-5eb2-cdb94699cb5e/mzaf_8577983610281779641.plus.aac.p.m4a",
+    "match": {
+      "source": "itunes",
+      "artist": "Flower Travellin' Band",
+      "album": "Satori",
+      "year": 1971,
+      "genre": "Alternative",
+      "link": "https://music.apple.com/us/album/satori/415296152?uo=4",
+      "score": 0.8
+    },
+    "status": "ok"
+  },
+  "https://mattachine.bandcamp.com/album/isolation-as-a-form-of-torture": {
+    "url": "https://mattachine.bandcamp.com/album/isolation-as-a-form-of-torture",
+    "artist": "Mattachine",
+    "album": "Isolation...etc. EP",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1630929688_5.jpg",
+    "audio": null,
+    "match": {
+      "source": "bandcamp",
+      "artist": "Mattachine",
+      "album": "Isolation...etc. EP",
+      "year": null,
+      "genre": null,
+      "link": "https://mattachine.bandcamp.com/album/isolation-as-a-form-of-torture",
+      "score": null,
+      "pageTitle": "Isolation as a Form of Torture, by Mattachine"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://computer-gaze.bandcamp.com/album/between-two-worlds": {
+    "url": "https://computer-gaze.bandcamp.com/album/between-two-worlds",
+    "artist": "Infinity Frequencies",
+    "album": "Between Two Worlds",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3628696717_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2f/33/02/2f3302cb-9dc1-f889-aeac-4a9148171260/mzaf_8396405336168915181.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Infinity Frequencies",
+      "album": "Between Two Worlds",
+      "year": null,
+      "genre": null,
+      "link": "https://computer-gaze.bandcamp.com/album/between-two-worlds",
+      "score": null,
+      "pageTitle": "Between two worlds, by Infinity Frequencies"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://sharadashashidhar.bandcamp.com/album/rahu": {
+    "url": "https://sharadashashidhar.bandcamp.com/album/rahu",
+    "artist": "Sharada Shashidhar",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0504479809_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/f9/ef/a4/f9efa420-1544-de8a-3e48-992cb11c1840/mzaf_14120438955115746464.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Sharada Shashidhar",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://sharadashashidhar.bandcamp.com/album/rahu",
+      "score": null,
+      "pageTitle": "Rahu, by Sharada Shashidhar"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://nubiyantwist.bandcamp.com/album/freedom-fables": {
+    "url": "https://nubiyantwist.bandcamp.com/album/freedom-fables",
+    "artist": "Nubiyan Twist",
+    "album": "Freedom Fables",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2461085139_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/05/96/4705960f-5dc1-1661-a479-575492c26b32/mzaf_10708221938422460641.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Nubiyan Twist",
+      "album": "Freedom Fables",
+      "year": null,
+      "genre": null,
+      "link": "https://nubiyantwist.bandcamp.com/album/freedom-fables",
+      "score": null,
+      "pageTitle": "Freedom Fables, by Nubiyan Twist"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://astahiroki.bandcamp.com/album/entropy": {
+    "url": "https://astahiroki.bandcamp.com/album/entropy",
+    "artist": "Asta Hiroki",
+    "album": "Entropy",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a1234381872_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/cc/84/e8/cc84e802-b239-45e8-c9db-bb4fd8a7be6b/mzaf_7687786438775284926.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Asta Hiroki",
+      "album": "Entropy",
+      "year": null,
+      "genre": null,
+      "link": "https://astahiroki.bandcamp.com/album/entropy",
+      "score": null,
+      "pageTitle": "Entropy, by Asta Hiroki"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://subsoniceye.bandcamp.com/album/nature-of-things": {
+    "url": "https://subsoniceye.bandcamp.com/album/nature-of-things",
+    "artist": "Subsonic Eye",
+    "album": "Nature of Things",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a0603047834_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/80/04/87/80048750-dd6b-c618-1e59-55f16a171497/mzaf_7406336863076273826.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Subsonic Eye",
+      "album": "Nature of Things",
+      "year": null,
+      "genre": null,
+      "link": "https://subsoniceye.bandcamp.com/album/nature-of-things",
+      "score": null,
+      "pageTitle": "Nature of Things, by Subsonic Eye"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://parannoul.bandcamp.com/album/to-see-the-next-part-of-the-dream": {
+    "url": "https://parannoul.bandcamp.com/album/to-see-the-next-part-of-the-dream",
+    "artist": "Parannoul",
+    "album": "To See the Next Part of the Dream",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3727718257_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a2/b8/35/a2b83557-5096-81df-103b-30528277cc6e/mzaf_8339475066434302600.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Parannoul",
+      "album": "To See the Next Part of the Dream",
+      "year": null,
+      "genre": null,
+      "link": "https://parannoul.bandcamp.com/album/to-see-the-next-part-of-the-dream",
+      "score": null,
+      "pageTitle": "To See the Next Part of the Dream, by Parannoul"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://telenights.bandcamp.com/": {
+    "url": "https://telenights.bandcamp.com/",
+    "artist": "Telenights",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/0024516980_23.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/4b/0c/4b/4b0c4b07-5ee3-700a-5ee8-db8fd9afb3ac/mzaf_4578336941145087505.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Telenights",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://telenights.bandcamp.com/",
+      "score": null,
+      "pageTitle": "Telenights"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://macroblank.bandcamp.com/": {
+    "url": "https://macroblank.bandcamp.com/",
+    "artist": "Macroblank",
+    "album": "",
+    "year": null,
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/3d/52/213d5228-3ab1-d252-36da-26fe0083faa0/artwork.jpg/600x600bb.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/66/89/936689dc-0726-1afc-dfd7-48b95d82bb8f/mzaf_5897241050774100562.plus.aac.p.m4a",
+    "match": {
+      "source": "itunes",
+      "artist": "Macroblank",
+      "album": "ShantyTown (Original Game Soundtrack)",
+      "year": 2026,
+      "genre": "Soundtrack",
+      "link": "https://music.apple.com/us/album/shantytown-original-game-soundtrack/1894938403?uo=4",
+      "score": 1
+    },
+    "status": "ok"
+  },
+  "https://tokimonsta.bandcamp.com/album/oasis-nocturno-2": {
+    "url": "https://tokimonsta.bandcamp.com/album/oasis-nocturno-2",
+    "artist": "TOKiMONSTA",
+    "album": "Oasis Nocturno",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a3163267673_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/af/b4/ab/afb4ab01-7cbd-bc60-b9bb-45d45523679f/mzaf_5306978293914845427.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "TOKiMONSTA",
+      "album": "Oasis Nocturno",
+      "year": null,
+      "genre": null,
+      "link": "https://tokimonsta.bandcamp.com/album/oasis-nocturno-2",
+      "score": null,
+      "pageTitle": "Oasis Nocturno, by TOKiMONSTA"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://comtruise.bandcamp.com/album/in-decay-too": {
+    "url": "https://comtruise.bandcamp.com/album/in-decay-too",
+    "artist": "Com Truise",
+    "album": "In Decay Too",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/a2141637572_5.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c9/05/13/c9051363-6080-b464-5461-b841f641ac66/mzaf_14795120242723178799.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Com Truise",
+      "album": "In Decay Too",
+      "year": null,
+      "genre": null,
+      "link": "https://comtruise.bandcamp.com/album/in-decay-too",
+      "score": null,
+      "pageTitle": "In Decay, Too, by Com Truise"
+    },
+    "status": "ok (bandcamp)"
+  },
+  "https://antibalas.bandcamp.com/": {
+    "url": "https://antibalas.bandcamp.com/",
+    "artist": "Anitbalas",
+    "album": "",
+    "year": null,
+    "art": "https://f4.bcbits.com/img/0041022707_23.jpg",
+    "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/df/83/a0df83a3-3476-395c-a75f-77f82c13f593/mzaf_682997902224529647.plus.aac.p.m4a",
+    "match": {
+      "source": "bandcamp",
+      "artist": "Anitbalas",
+      "album": "",
+      "year": null,
+      "genre": null,
+      "link": "https://antibalas.bandcamp.com/",
+      "score": null,
+      "pageTitle": "Antibalas"
+    },
+    "status": "ok (bandcamp)"
+  }
+}

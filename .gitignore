@@ -17,3 +17,8 @@ npm-debug.log*
 # Local session notes, never committed
 SESSION-HANDOFF.md
 NOTES.md
+
+# Scratch reports from the link-hunting passes, never committed
+FOUND-LINKS.md
+MISSING-LINKS.md
+missing-links-*.md

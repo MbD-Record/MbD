@@ -10,6 +10,33 @@ const { headings } = Astro.props;
 const currentSlug = Astro.params.slug;
 
 const entries = (await getCollection('blog')).sort(byYearDesc);
+
+// The sidebar is a month index, so it lists months and nothing else.
+//
+// Filtering on depth alone is not enough: backlog pages such as 2017 have no
+// months and instead put Albums / Tracks / Lists directly at depth 2, which
+// would otherwise show up here pretending to be months. Matching the heading
+// text against the month names handles that without naming any page, so a
+// backlog page simply contributes nothing.
+const MONTHS = [
+  'january', 'february', 'march', 'april', 'may', 'june',
+  'july', 'august', 'september', 'october', 'november', 'december',
+];
+
+// A heading counts as a month when every part of it is one, so combined
+// headings like "September / October" or a trailing year like "January 2023"
+// both resolve. Anything else -- "Albums", "Tracks", "Lists" on a backlog
+// page -- is skipped.
+const isMonth = (text: string) => {
+  const cleaned = text
+    .trim()
+    .toLowerCase()
+    .replace(/\s*\d{4}\s*$/, '')
+    .trim();
+  return cleaned.length > 0 && cleaned.split(/[\/\-–&]/).every((part) => MONTHS.includes(part.trim()));
+};
+
+const months = headings.filter((h) => h.depth === 2 && isMonth(h.text));
 ---
 
 <aside>
@@ -29,9 +56,9 @@ const entries = (await getCollection('blog')).sort(byYearDesc);
               >
                 {entry.data.title}
               </a>
-              {isCurrent && headings.length > 0 && (
+              {isCurrent && months.length > 0 && (
                 <ul>
-                  {headings.map((heading) => (
+                  {months.map((heading) => (
                     <li class='py-1 pl-4'>
                       <a
                         class='font-bold transition-all duration-150 ease-in-out text-dark poppins hover:underline'

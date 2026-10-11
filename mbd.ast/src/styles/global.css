@@ -196,3 +196,92 @@ html {
   padding: 0.35rem 0.6rem;
   border-width: 2px;
 }
+
+/* ---- Compact release row ------------------------------------------------
+   The small per-entry list used inside a month's Albums/Tracks/Lists block.
+   A permanent drop-shadow is wrong at this density -- with a few hundred rows
+   on one page it becomes noise -- so the resting state is a hairline outline
+   and the shadow only arrives on hover, keeping the site's existing motion.
+   The --offset variant is a hard brutalist shadow instead of a filter. */
+
+.mbd-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mbd-row__thumb {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #000000;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.mbd-row__label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.mbd-row__meta {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Queue tracking, when it rides along on the row rather than in prose. */
+.mbd-row__note {
+  flex: 0 0 auto;
+  padding-left: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.01em;
+  opacity: 0.6;
+  white-space: nowrap;
+  font-family: 'Sanchez', serif;
+}
+
+.mbd-row:hover {
+  box-shadow: 3px 3px 0 rgb(0 0 0 / 1);
+}
+
+/* Hard offset border: the shadow is a solid copy of the box rather than a
+   blur, so it stays crisp at any radius. Clicking it presses the row down. */
+.mbd-row--offset {
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.mbd-row--offset:hover {
+  box-shadow: 1px 1px 0 #000000;
+  transform: translate(2px, 2px);
+}
+
+/* ---- Queue tracking -----------------------------------------------------
+   An entry can carry when it was queued and when it came out of the To Do
+   list, so the trail is visible without keeping a second copy of the item:
+
+     [Artist - Album](url) *added Aug 2023*            still pending
+     [Artist - Album](url) *todo Aug 2023 -> Oct 2026* promoted
+
+   The rehype plugin in src/lib/rehype-track.mjs marks these up as
+   .mbd-track, so ordinary italics in prose are left alone. */
+
+.mbd-page article.prose .mbd-track {
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+  opacity: 0.65;
+  white-space: nowrap;
+  margin-left: 0.4rem;
+  font-family: 'Sanchez', serif;
+}
