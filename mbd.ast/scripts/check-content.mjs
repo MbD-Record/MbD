@@ -60,6 +60,11 @@ for (const file of fs.readdirSync(BLOG).filter((f) => f.endsWith('.md')).sort())
     const rawLine = lines[i]
     if (i < start) continue
 
+    // Checked before the heading branch, which `continue`s. A tab inside a
+    // heading used to slip through entirely, and `##\tJanuary` matches the
+    // heading regex, so the old ordering never saw it.
+    if (rawLine.includes('\t')) fail(file, i + 1, 'tab-character', s)
+
     const h = s.match(/^(#{1,6})\s+(.+)$/)
     if (h) {
       const depth = h[1].length
@@ -105,7 +110,6 @@ for (const file of fs.readdirSync(BLOG).filter((f) => f.endsWith('.md')).sort())
     if (!s) continue
     if (/^https?:\/\//.test(s)) fail(file, i + 1, 'bare-url', s)
     if (/<br/i.test(s)) fail(file, i + 1, 'br-tag', s)
-    if (rawLine.includes('\t')) fail(file, i + 1, 'tab-character', s)
   }
 
   if (h1 === 0) fail(file, 1, 'single-h1', 'no H1 at all')

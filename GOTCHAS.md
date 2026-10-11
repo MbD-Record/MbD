@@ -30,8 +30,16 @@ Defences now in place — do not bypass them:
   an unreadable artwork cache.
 - `BlogPost.astro` declares a typed `Props` interface, so omitting `headings`
   is a compile error.
-- CI asserts every content slug rendered at least one release row, and that
-  the total stays above a floor.
+- CI (`.github/workflows/ci.yml`, at the repo root) runs
+  `check:content` → `check` → `build`, then asserts:
+  - every content slug has a built page with at least one release row;
+  - the release-row total stays above a floor;
+  - `dist/` contains no dotfiles (see §11).
+
+`npm run verify` runs the same first three locally, so it reproduces CI.
+
+**A new defence is only trustworthy once you have seen it fail.** Every check
+above was tested with a deliberate violation before being relied on.
 
 ## 2. Check thresholds must be measured, not guessed
 
@@ -43,8 +51,17 @@ calibrated on the wrong number.
 Match the exact class with quotes: `class="mbd-row"`.
 
 More generally: a check that has never been seen to fail is not a check. Add
-the deliberate violation, watch it fail, then revert. The content checker has
-been through this for all five of its rules.
+the deliberate violation, watch it fail, then revert.
+
+All eight rules in `check-content.mjs` have now been verified that way
+(`single-h1`, `month-heading`, `year-heading`, `section-heading`, `bare-url`,
+`br-tag`, `tab-character`, `artwork-cache`), as has the CI dotfile check.
+
+**That audit was worth more than it cost.** Claiming "all five rules verified"
+when the file had eight was wrong, and chasing the discrepancy found a real
+bug: `tab-character` sat *after* the heading branch, which `continue`s, so a
+tab inside any heading was never caught. Only tabs in body lines were. Fixed
+by moving the check above the heading match.
 
 ## 3. Slugs, and the case-sensitivity trap
 
@@ -139,6 +156,28 @@ Always pin before touching `gh` or this remote:
 
 **Not yet done:** a repository-scoped SSH deploy key, and one VPS Unix user
 per GitHub account. Both are still open — see the handoff.
+
+### Rewriting author identity on existing history
+
+Needed here once, and the failure mode is worth remembering:
+
+- **`sh script.sh` does not work.** `filter-branch --env-filter` runs in the
+  current shell; `sh script.sh` spawns a subshell, so the exports never land.
+  The exports in `script.sh` are lost, the commit hash is unchanged, and
+  `filter-branch` reports `Ref 'refs/heads/main' is unchanged` — a
+  success-shaped message for a no-op. **Source it with `.` instead.**
+- **PowerShell mangles a multi-line `--env-filter`.** It splits the argument
+  and git sees `bad revision 'Code'`. Put the script in a file and reference
+  it with a **space-free absolute path** (this machine's temp dir has an 8.3
+  short name, `DR9A85~1.COM`, which works). A *relative* path fails because
+  `filter-branch` runs from a temporary checkout.
+- **`--tag-name-filter cat` rewrites tags too** — including any backup tag you
+  made, quietly destroying the undo path you were about to verify against.
+  Scope the rewrite with `-- main` instead of `-- --all`.
+- **Verify before force-pushing:** compare `^{tree}` of each old and new
+  commit pairwise. Trees identical means only metadata changed.
+- `filter-branch` bails atomically on failure, so a failed attempt leaves
+  history untouched. That is not a reason to skip checking the output.
 
 ## 10. PowerShell traps in this repo
 
