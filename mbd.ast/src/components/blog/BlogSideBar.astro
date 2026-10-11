@@ -52,7 +52,7 @@ const months = headings.filter((h) => h.depth === 2 && isMonth(h.text));
                   'transition-all duration-150 ease-in-out text-dark poppins hover:underline',
                   isCurrent && 'font-bold',
                 ]}
-                href={`/blog/${entry.slug}/`}
+                href={`/${entry.slug}/`}
               >
                 {entry.data.title}
               </a>

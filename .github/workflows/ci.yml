@@ -45,18 +45,27 @@ jobs:
 
       - name: Confirm entries still render as rows
         # A row count of zero means the rehype pass silently stopped matching,
-        # which would otherwise ship a site of plain prose. Checked per page,
-        # because a total can stay high while one page goes empty.
+        # which would otherwise ship a site of plain prose. Slugs come from the
+        # content directory rather than a glob over dist, so the lab and test
+        # pages at the site root do not get counted as broken posts.
         run: |
           total=0
           failed=0
-          for page in dist/blog/*/index.html; do
-            name=$(basename "$(dirname "$page")")
+          for md in src/content/blog/*.md; do
+            # Astro slugifies, so To-Do.md becomes to-do. The runner's
+            # filesystem is case sensitive and will not paper over this.
+            slug=$(basename "$md" .md | tr '[:upper:]' '[:lower:]')
+            page="dist/$slug/index.html"
+            if [ ! -f "$page" ]; then
+              echo "  $slug: MISSING at $page" >&2
+              failed=1
+              continue
+            fi
             count=$(grep -o 'class="mbd-row"' "$page" | wc -l)
-            echo "$name: $count"
+            echo "  $slug: $count"
             total=$((total + count))
             if [ "$count" -eq 0 ]; then
-              echo "  $name rendered no release rows" >&2
+              echo "  $slug rendered no release rows" >&2
               failed=1
             fi
           done
