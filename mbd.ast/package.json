@@ -11,7 +11,10 @@
     "build": "astro build",
     "check": "astro check",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:content": "node scripts/check-content.mjs",
+    "verify": "npm run check:content && npm run check && npm run build",
+    "enrich": "node scripts/enrich.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",

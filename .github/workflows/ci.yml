@@ -1,0 +1,69 @@
+name: CI
+
+# Guards the build. Nothing deploys automatically -- Cloudflare Pages is not
+# connected to this repo yet, and when it is, deploying stays a deliberate act.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mbd.ast
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: mbd.ast/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Content invariants
+        # Catches the things that fail silently rather than at build time:
+        # a bare URL, a second H1, a month heading that is not a month, a
+        # stray <br> or tab, an unreadable artwork cache.
+        run: node scripts/check-content.mjs
+
+      - name: Types
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      - name: Confirm entries still render as rows
+        # A row count of zero means the rehype pass silently stopped matching,
+        # which would otherwise ship a site of plain prose. Checked per page,
+        # because a total can stay high while one page goes empty.
+        run: |
+          total=0
+          failed=0
+          for page in dist/blog/*/index.html; do
+            name=$(basename "$(dirname "$page")")
+            count=$(grep -o 'class="mbd-row"' "$page" | wc -l)
+            echo "$name: $count"
+            total=$((total + count))
+            if [ "$count" -eq 0 ]; then
+              echo "  $name rendered no release rows" >&2
+              failed=1
+            fi
+          done
+          echo "total release rows: $total"
+          # Content only ever grows, so this is a floor against silent
+          # under-matching rather than an expected value.
+          if [ "$failed" -ne 0 ] || [ "$total" -lt 700 ]; then
+            echo "row rendering looks broken" >&2
+            exit 1
+          fi

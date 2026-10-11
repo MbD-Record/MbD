@@ -4,7 +4,23 @@ import BlogSideBar from '@components/blog/BlogSideBar.astro';
 import BlogContent from '@components/blog/BlogContent.astro';
 import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import type { MarkdownHeading } from 'astro';
 import { byYearDesc } from '../lib/entries';
+
+/**
+ * Typed so that omitting or renaming a prop is a build error.
+ *
+ * `headings` is the load-bearing one: the sidebar's month index is built
+ * entirely from it, and a component that renders a collection entry without
+ * passing `render()`'s headings produces a silently empty sidebar rather than
+ * a visible failure. Requiring it here moves that from runtime silence to a
+ * compile error.
+ */
+interface Props {
+  content: CollectionEntry<'blog'>['data'];
+  headings: MarkdownHeading[];
+}
 
 const { content, headings } = Astro.props;
 const { title, description } = content;
@@ -19,7 +35,7 @@ const older =
   position >= 0 && position < entries.length - 1 ? entries[position + 1] : null;
 ---
 
-<Layout title={title as string} description={description as string}>
+<Layout title={title} description={description}>
   <main class='mbd-page p-6'>
     <div class='flex flex-col lg:grid lg:grid-cols-[auto_1fr] gap-8'>
       <BlogSideBar headings={headings} />
