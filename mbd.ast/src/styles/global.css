@@ -262,6 +262,74 @@ html {
   box-shadow: 3px 3px 0 #000000;
 }
 
+/* ---- Month and section structure ----------------------------------------
+   The lab page (rowlab.astro) previews the intended structure: 2px outline per
+   row, 6px between them, then each month bounded. The markdown posts render
+   rows as raw HTML through rehype-release, so none of that arrives as utility
+   classes -- .mbd-rows supplies the row gap, and rehype-month-groups wraps each
+   month in a section so it can be outlined as one area.
+
+   The wrapper's `mbd-card` class already carries the border, radius, shadow and
+   padding, and the rotating colour comes from the `mbd-card--N` the plugin
+   attaches. What is left here is only what a utility class cannot express on
+   markdown output: spacing from the element above, and the heading sizes the
+   lab uses. Everything below mirrors 2026-test.astro's month sections so the
+   two stay identical rather than merely similar.
+
+   One outline per month, not per section: the box holds the month's Albums,
+   Tracks and To Do together, so the divisions inside stay unnamed and the
+   border does the grouping. */
+
+.mbd-page article.prose .mbd-month {
+  margin-top: 2rem; /* mb-8 */
+}
+
+.mbd-page article.prose .mbd-month:first-of-type {
+  margin-top: 0;
+}
+
+/* text-xl, mb-3 -- and no margin-top: the typography preset gives prose
+   headings `margin: 1.75em 0 .5em`, and leaving the top in place pushes the
+   month name away from the top of its own card. line-height is stated because
+   prose sets 1.25 and the lab's `text-xl` uses 1.75rem, which is what makes
+   the two pages differ in apparent size. */
+.mbd-page article.prose .mbd-month > h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* text-xs, uppercase, tracking-widest, opacity-70, mb-2 */
+.mbd-page article.prose .mbd-month h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  color: inherit;
+}
+
+.mbd-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem; /* gap-1.5, matching the lab */
+}
+
+/* mb-4, but none after the last block in the month: `last:mb-0`. */
+.mbd-page article.prose .mbd-month .mbd-rows {
+  margin-bottom: 1rem;
+}
+
+.mbd-page article.prose .mbd-month .mbd-rows:last-child {
+  margin-bottom: 0;
+}
+
 .mbd-row--offset:hover {
   box-shadow: 1px 1px 0 #000000;
   transform: translate(2px, 2px);
