@@ -26,14 +26,17 @@ HTML in `dist/`, not the source.
 
 Defences now in place — do not bypass them:
 - `npm run check:content` (`scripts/check-content.mjs`) fails on bare URLs,
-  second H1s, month headings that are not months, stray `<br>` and tabs, and
-  an unreadable artwork cache.
+  `[x](null)`, second H1s, headings that are not in the registry, stray `<br>`
+  and tabs, an entry paragraph holding anything but entry links, an unranked
+  non-year post, frontmatter `layout:` or unknown keys, a date-shaped
+  `pubDate` that does not parse, and an unreadable artwork cache.
 - `BlogPost.astro` declares a typed `Props` interface, so omitting `headings`
   is a compile error.
 - CI (`.github/workflows/ci.yml`, at the repo root) runs
   `check:content` → `check` → `build`, then asserts:
   - every content slug has a built page with at least one release row;
-  - the release-row total stays above a floor;
+  - no page falls below 5 rows and the total holds at 850 against a measured
+    878 (see §2 — the old 700 floor came from a miscount);
   - `dist/` contains no dotfiles (see §11).
 
 `npm run verify` runs the same first three locally, so it reproduces CI.
@@ -73,51 +76,80 @@ by moving the check above the heading match.
   `dist/To-Do/` does not exist on the Linux CI runner; it only *appears* to
   resolve on Windows. This is a bug that builds fine locally and fails in CI.
 
-## 4. Content heading contract
+## 4. Content structure lives elsewhere
 
-Two shapes, and they are not interchangeable:
+The structure of the content — page types, the heading registry, entry labels,
+the To Do → dated-page notations — is specified in **`CONTENT-STRUCTURE.md` at
+the repo root**. The procedures for the three recurring edits are in
+**`CONTENT-UPDATES.md`**. Both are foundational; this file is only their list of
+traps. Read those first.
 
-- **Year posts** (`2017.md`…`2026.md`): `H1` = title, `H2` = month,
-  `H3` = section (`Albums`, `Tracks`, `Lists`, `To Do`, …).
-  `2017.md` is a backlog page with no months, so its `H2`s are sections.
-- **`To-Do.md`**: `H1` = title, `H2` = year or named group
-  (`Catching Up`, `To Do OLD`), `H3` = month *or* section.
+The trap that most often bites is not in the registry but in how entries are
+written, because `rehype-release` matches on *paragraph shape* and silently
+demotes the whole paragraph when it does not match:
 
-The sidebar month index is built **only** from `H2`s on year posts. An `H2` that
-is neither a month nor a section silently drops content out of navigation.
+- **A bare-text entry between linked entries kills the whole paragraph.**
+  `Encounters With a Yeti - Pilot` at `2018.md:26`, the `(free jazz)` after a
+  link at `2020.md:76`, and `Basement 5 - 1965-80` at `To-Do.md:99` each cost
+  their neighbours their release rows: 22 links rendered as prose instead of
+  entries, with no error. A fourth instance, `(unlistenable)` at `2020.md:129`,
+  was still there when these were found. An entry with no known URL goes on its
+  own paragraph, separated by blank lines.
+- **`(parenthetical)` after a link is the same failure.** Anything in the
+  paragraph that is not a link or a tracking annotation defeats the match. A
+  note on the entry's own line is written as trailing emphasis —
+  `[Last Exit](url) *free jazz*` — which the row transform accepts.
+- **Both are build failures**, as `paragraph-shape` in `check-content.mjs`.
+- **An entry in To Do that is also on another page comes off the To-Do page**
+  (`to-do-elsewhere` in the same script). A tracking annotation is the only
+  thing that makes keeping it deliberate. This is `CONTENT-STRUCTURE.md` §7.
+- CI's row floor is now **850** against a measured **878**, with the per-page
+  numbers and the date recorded beside it. See §2 for why that matters more than
+  the number itself.
 
-`scripts/check-content.mjs` enforces all of this. If you add a heading type,
+`scripts/check-content.mjs` enforces the registry in `CONTENT-STRUCTURE.md` §4
+and the rules above. It decides page type by **filename**, not by content —
+the old version sniffed for a bare-year `H2`, so editing headings could
+silently switch a file to a different ruleset. If you add a heading type,
 extend that script rather than eyeballing it.
 
 ## 5. Frontmatter schema traps
 
-- **`title: 2018` must be quoted** (`title: '2018'`). Unquoted, YAML parses it
-  as a number and it fails the `z.string()` schema.
-- **`pubDate` is free text**, not a date. Values like `"through 2018"`,
-  `"Ongoing"`, `"In the past"`. The schema coerces to `Date`, so bad ones
-  become Invalid Date.
-- `feed.xml.js` must **omit the `pubDate` key entirely** for those entries,
-  not set it `undefined`. `@astrojs/rss` is pinned to `4.0.19`; the schema
-  rejects the `undefined` form.
-- `imgUrl` was removed from the schema along with `src/assets/`. Do not
-  reintroduce it.
-- `buttonLabel` and `tags` are optional. Only `To-Do.md` uses `buttonLabel`.
+The schema is in `src/content/config.ts`. Two things it does **not** do, which
+is why `check-content.mjs` checks them instead:
+
+- **`z.object()` strips unknown keys silently.** A stray `imgUrl:` or a typo
+  builds clean and the field simply vanishes. Caught by `frontmatter-unknown-key`.
+- **`pubDate` is free text and is coerced with `new Date(str)`**, so most values
+  become Invalid Date on purpose — `"through 2024"`, `"Ongoing"`, `"In the past"`.
+  That is fine. A value that *looks* like a date and is not is caught by
+  `frontmatter-pubdate`. `feed.xml.js` already omits the key for the rest.
+
+`title: 2018` must be quoted (`title: '2018'`) — unquoted, YAML parses it as a
+number and `z.string()` fails the build. That one needs no extra check.
+
+Never put `layout:` in frontmatter. Astro 4 then renders an unstyled page with
+no error; `[slug].astro` applies the layout itself. Caught by
+`frontmatter-layout`.
 
 ## 6. Ordering
 
-`Number(slug)` yields `NaN` for `to-do`, so a raw
-`Number(a.slug) - Number(b.slug)` comparator silently breaks ordering. Use
-`byYearDesc` from `src/lib/entries.ts`, which sorts numeric years newest-first
-and pins non-numeric entries to the end.
+Navigation is years newest-first, then `older`, then `to-do`. `Number(slug)` is
+`NaN` for anything non-numeric, so a raw `Number(a.slug) - Number(b.slug)`
+comparator breaks ordering silently. `byYearDesc` in `src/lib/entries.ts` owns
+that order, and `check-content.mjs` has a `nav-order` rule that fails if a new
+non-year post is added without a rank — it guards the input rather than
+duplicating the comparator, so the two cannot drift.
 
 ## 7. Layout is applied explicitly
 
 Astro 4 falls back to a bare `<Content />` when frontmatter `layout:` is
 missing — unstyled page, no error. `src/pages/[slug].astro` renders
 `<BlogPost>` itself and passes `render()`'s `headings`, because that is the
-only way to get them into the sidebar.
-
-Do not reintroduce `layout:`.
+only way to get them into the sidebar. `BlogPost.astro` declares a typed
+`Props`, so omitting `headings` is a compile error rather than an empty
+sidebar. Do not reintroduce `layout:` — `frontmatter-layout` now fails the
+build.
 
 ## 8. The release-row transform
 
@@ -128,6 +160,23 @@ the live pages and the lab components cannot drift.
 It matches on *paragraph shape*, so trailing `<br>`, tabs, or blank lines
 between entries stop it matching — and the page still builds. That is exactly
 why CI asserts row counts.
+
+**A `[Label](null)` link costs its neighbours their rows too.** Markdown reads
+`[x](null)` as a *valid* link whose target is the string `null` — no warning,
+build stays green, and `dist/` ships a dead `href="null"`. Worse,
+`rehype-release.mjs` rejects any href that is not `http(s)`, and it rejects the
+**whole paragraph**, so one `null` demotes every healthy entry beside it to
+plain prose. Fixing 12 such links took the build from 796 rows to 839 — the
+paragraph effect, not the 12 entries. Write an entry with no known URL as bare
+text instead. `check:content` now has a `null-link` rule for this.
+
+**Editorial links belong in `### Lists`.** A guide, feature, interview,
+discussion or Bandcamp tag page is not a release, but `rehype-release` renders
+both identically — so a `daily.bandcamp.com` list filed under `### Albums`
+looks completely normal while being misfiled. Keep them in `### Lists`, placed
+after Albums/Tracks and before Listen Again / To Do. This one is editorial and
+is *not* automated: a URL-shape heuristic would produce false positives on
+every artist page and no false negatives at all.
 
 `rehype-track.mjs` styles `*added*`, `*to do*`, `*heard*` annotations without
 catching ordinary italics.
@@ -144,54 +193,88 @@ git config --local user.email "stcawv@gmail.com"
 That controls **who commits are attributed to**. It does **not** control
 **which account pushes**.
 
-Push auth goes through the credential helper `gh auth git-credential`, which
-serves the token for whichever account is *currently active*. That ambient
-state is the original root cause of the misattribution.
-
-Always pin before touching `gh` or this remote:
+Push auth does **not** go through `gh auth git-credential` on this machine.
+That was the theory when this was written and it is wrong. Measured 2026-10-12:
 
 ```
-. .\gh-profile.ps1      # sets $env:GH_TOKEN for MbD-Record
+git config --show-origin --get-all credential.helper
+  file:C:/Program Files/Git/etc/gitconfig   manager
 ```
 
-**Not yet done:** a repository-scoped SSH deploy key, and one VPS Unix user
-per GitHub account. Both are still open — see the handoff.
+It is **Git Credential Manager**, configured globally, and GCM has a
+`rock-solid-sites` token in the Windows credential store:
 
-### Rewriting author identity on existing history
+```
+git push --dry-run origin main
+  remote: Permission to MbD-Record/MbD.git denied to rock-solid-sites.
+  fatal: ... 403
+```
 
-Needed here once, and the failure mode is worth remembering:
+So the active identity for a push is whatever GCM has cached, and right now
+that is the wrong account. **The mitigating fact is that it fails loudly** —
+403, not a silent write to the wrong place. Nothing has been pushed to the
+wrong account because nothing has been pushed at all.
 
-- **`sh script.sh` does not work.** `filter-branch --env-filter` runs in the
-  current shell; `sh script.sh` spawns a subshell, so the exports never land.
-  The exports in `script.sh` are lost, the commit hash is unchanged, and
-  `filter-branch` reports `Ref 'refs/heads/main' is unchanged` — a
-  success-shaped message for a no-op. **Source it with `.` instead.**
-- **PowerShell mangles a multi-line `--env-filter`.** It splits the argument
-  and git sees `bad revision 'Code'`. Put the script in a file and reference
-  it with a **space-free absolute path** (this machine's temp dir has an 8.3
-  short name, `DR9A85~1.COM`, which works). A *relative* path fails because
-  `filter-branch` runs from a temporary checkout.
-- **`--tag-name-filter cat` rewrites tags too** — including any backup tag you
-  made, quietly destroying the undo path you were about to verify against.
-  Scope the rewrite with `-- main` instead of `-- --all`.
-- **Verify before force-pushing:** compare `^{tree}` of each old and new
-  commit pairwise. Trees identical means only metadata changed.
-- `filter-branch` bails atomically on failure, so a failed attempt leaves
-  history untouched. That is not a reason to skip checking the output.
+## 9.1 Git attribution vs push authentication are different things
+
+**Fixed:** commit *attribution* — who a commit is credited to:
+
+```
+git config --local user.name  "Claude Code"
+git config --local user.email "stcawv@gmail.com"
+```
+
+All history was rewritten and force-pushed with these in place, which is why
+GitHub shows `MbD-Record` as the owner of every commit.
+
+**Not fixed:** push *authentication* — which account the remote sees. That is
+the GCM credential above, and it is the account that gets READ on
+`MbD-Record/MbD` and 403 on write.
+
+Fixing one does not fix the other. That distinction is the entire content of
+this section, and it has already been misread once.
+
+**Two ways out, in order of how much they remove:**
+
+1. **Move `origin` to SSH.** An SSH key is bound to an account, not to ambient
+   state, so this ends the problem rather than managing it. `gh ssh-key add`
+   also needs `admin:public_key` and will fail the same way — add the key
+   through the GitHub web UI instead.
+2. **Until then, authenticate as `MbD-Record` explicitly** before any push:
+   ```
+   gh auth switch --user MbD-Record
+   ```
+   and if GCM keeps serving the old token, clear it and let it re-auth.
+
+**Check `gh auth status` before doing anything with `gh`.** It currently
+reports `rock-solid-sites` as active with only `READ` on this repo — which is
+how the original misattribution happened, when `gh repo create` ran under the
+wrong account.
 
 ## 10. PowerShell traps in this repo
 
-The working directory contains a space (`Dr. COMPUTER`) and the route file is
-`[slug].astro`, which PowerShell reads as a **wildcard**:
+**Use the Node scripts, not PowerShell, for anything that reads or writes a
+file.** Most of this section was about workarounds for a shell that is the wrong
+tool here, and the workarounds are now gone:
 
-- Use `-LiteralPath` with `Get-Content`, `Copy-Item`, `Test-Path` on anything
-  under `src\pages\`. Plain `Get-Content` fails with a misleading
-  *parameter cannot be found that matches parameter name 'Raw'*.
-- `git mv`/`git mv`-style moves of that file need quoting.
-- `ConvertTo-Json | Set-Content -Encoding UTF8` **adds a BOM and reformats the
-  whole file**, writing `\u003e` for `>=` and `\u0026\u0026` for `&&`.
-  That breaks JSON parsing downstream (PostCSS config loading failed) and makes
-  the diff unreviewable. Edit JSON files by hand.
+| Instead of | Use |
+|---|---|
+| `ConvertTo-Json \| Set-Content` on `artwork.json` | `node scripts/og.mjs --write <url>` |
+| `node -e "fetch(...)"` for og: tags | `node scripts/og.mjs <url>` |
+| hand-checking content rules | `npm run check:content` |
+
+`ConvertTo-Json | Set-Content -Encoding UTF8` **adds a BOM and reformats the
+whole file**, writing `\u003e` for `>=` and `\u0026\u0026` for `&&`. It breaks
+JSON parsing downstream and makes the diff unreviewable. That is what
+`og.mjs --write` exists to prevent — it inserts text and never reformats.
+
+Two shell facts still worth knowing:
+
+- The working directory contains a space (`Dr. COMPUTER`) and the route file is
+  `[slug].astro`, which PowerShell reads as a **wildcard**. Use `-LiteralPath`
+  with `Get-Content`, `Copy-Item` and `Test-Path` on anything under
+  `src\pages\`. Plain `Get-Content` fails with a misleading *parameter cannot be
+  found that matches parameter name 'Raw'*.
 - `git checkout -- <file>` restores from the **index**, not `HEAD`. If the index
   already holds a bad edit, use `git checkout HEAD -- <file>`.
 
@@ -208,6 +291,21 @@ The working directory contains a space (`Dr. COMPUTER`) and the route file is
   on every build for months while being correctly gitignored. CI now fails on
   any dotfile in `dist/`. If you edit this repo from a Mac, check
   `public/.DS_Store` does not reappear.
-- `2026-test.astro`, `artlab.astro`, `rowlab.astro` are dev-only and
-  `Astro.redirect('/')` in PROD. Verified: PROD build emits a 355-byte redirect
-  stub with no entry data. They still occupy routes and appear in the sitemap.
+
+The dev-only lab pages (`2026-test`, `artlab`, `rowlab`) have been deleted.
+They were occupying routes and appearing in the sitemap while shipping a
+redirect stub in production. The month-card styling they previewed now lives
+only in `src/styles/global.css` and `src/lib/rehype-month-groups.mjs`, and the
+real posts are the reference.
+
+## 12. Reaching Bandcamp from this machine
+
+**Bandcamp is not blocked; PowerShell is.** `.NET`'s stack gets a Fastly
+challenge page that still returns **HTTP 200**, so the status code proves
+nothing — body length and the `_fs-ch` marker are the test. Node's `fetch` and
+`curl.exe` are served normally with no User-Agent at all.
+
+That is now handled for you: `scripts/enrich.mjs` (`fromBandcamp`) and
+`scripts/og.mjs` both read `og:title` / `og:image` off the page correctly. Use
+those instead of reaching for a shell. `_5` is the 700px artwork rendition and is
+always present; `_10` is 1200px and 404s on small uploads.
