@@ -14,6 +14,14 @@
  * unist-util-visit, so this adds no dependency the project does not already
  * declare. Astro's markdown pipeline is unified-based and already accepts
  * plugins through `markdown.rehypePlugins` in astro.config.ts.
+ *
+ * ⚠ INERT FOR ENTRY NOTES. This plugin runs first in astro.config.ts, and
+ * rehype-release then replaces the whole paragraph with generated row markup
+ * that renders the note as `<span class="mbd-row__note">` — discarding the
+ * annotated <em>. Measured: `mbd-track` occurs zero times in dist/. Entry
+ * notes are styled by .mbd-row__note in global.css, which is what you are
+ * looking at on the page. Do not add words to TRACKED expecting them to style a
+ * row note; they will not. It only affects emphasis that survives outside a row.
  */
 
 const TRACKED = /^(added|heard|todo|to do)\b/i

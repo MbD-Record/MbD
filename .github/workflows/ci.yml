@@ -48,6 +48,16 @@ jobs:
         # which would otherwise ship a site of plain prose. Slugs come from the
         # content directory rather than a glob over dist, so the lab and test
         # pages at the site root do not get counted as broken posts.
+        #
+        # Thresholds are measured, not guessed (GOTCHAS.md section 2). Measured
+        # per page on 2026-10-12: 2017=21 2018=13 2019=65 2020=77 2021=61
+        # 2022=93 2023=53 2024=99 2025=45 2026=20 to-do=331, total 878.
+        # Content only ever grows, so TOTAL_FLOOR exists to catch loss, not
+        # growth. A move between pages does not change the total; only a real
+        # deletion does, and every To-Do removal is a ledger row in
+        # TO-DO-REMOVALS.md -- so if this trips, check that file before raising
+        # the number. The old floor of 700 was written against a miscount of
+        # 2532 and would have passed the loss of 178 rows.
         run: |
           total=0
           failed=0
@@ -61,18 +71,18 @@ jobs:
               failed=1
               continue
             fi
+            # Exact class, with quotes. `class="mbd-row"` unquoted also matches
+            # mbd-rows and mbd-row__thumb and reported 2532 for 796 rows.
             count=$(grep -o 'class="mbd-row"' "$page" | wc -l)
             echo "  $slug: $count"
             total=$((total + count))
-            if [ "$count" -eq 0 ]; then
-              echo "  $slug rendered no release rows" >&2
+            if [ "$count" -lt 5 ]; then
+              echo "  $slug rendered $count release rows" >&2
               failed=1
             fi
           done
           echo "total release rows: $total"
-          # Content only ever grows, so this is a floor against silent
-          # under-matching rather than an expected value.
-          if [ "$failed" -ne 0 ] || [ "$total" -lt 700 ]; then
+          if [ "$failed" -ne 0 ] || [ "$total" -lt 850 ]; then
             echo "row rendering looks broken" >&2
             exit 1
           fi
