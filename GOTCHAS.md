@@ -217,39 +217,55 @@ wrong account because nothing has been pushed at all.
 
 ## 9.1 Git attribution vs push authentication are different things
 
-**Fixed:** commit *attribution* — who a commit is credited to:
+**Attribution — fixed, and it is the part that was done.** Commit *credit* is
+repo-local:
 
 ```
 git config --local user.name  "Claude Code"
 git config --local user.email "stcawv@gmail.com"
 ```
 
-All history was rewritten and force-pushed with these in place, which is why
-GitHub shows `MbD-Record` as the owner of every commit.
+History was rewritten and force-pushed with these in place, which is why GitHub
+shows `MbD-Record` for every commit.
 
-**Not fixed:** push *authentication* — which account the remote sees. That is
-the GCM credential above, and it is the account that gets READ on
-`MbD-Record/MbD` and 403 on write.
+**Push authentication — fixed 2026-10-12, differently.** `origin` is now SSH:
 
-Fixing one does not fix the other. That distinction is the entire content of
-this section, and it has already been misread once.
+```
+git@github.com-mbd:MbD-Record/MbD.git
+```
 
-**Two ways out, in order of how much they remove:**
+An SSH key is bound to an account, so it is unaffected by which account `gh`
+considers active or by what Git Credential Manager has cached. The dry run that
+preceded this measured, before and after:
 
-1. **Move `origin` to SSH.** An SSH key is bound to an account, not to ambient
-   state, so this ends the problem rather than managing it. `gh ssh-key add`
-   also needs `admin:public_key` and will fail the same way — add the key
-   through the GitHub web UI instead.
-2. **Until then, authenticate as `MbD-Record` explicitly** before any push:
-   ```
-   gh auth switch --user MbD-Record
-   ```
-   and if GCM keeps serving the old token, clear it and let it re-auth.
+| | before | after |
+|---|---|---|
+| `git push --dry-run` | `Permission to MbD-Record/MbD.git denied to rock-solid-sites` (403) | `8ec4f2a..98aaa91 main -> main` |
 
-**Check `gh auth status` before doing anything with `gh`.** It currently
-reports `rock-solid-sites` as active with only `READ` on this repo — which is
-how the original misattribution happened, when `gh repo create` ran under the
-wrong account.
+**Why not `gh ssh-key add`.** That needs the `admin:public_key` scope, which
+neither account's token has, and `gh auth refresh -s admin:public_key` is an
+interactive browser flow. A **repo deploy key** needs only `repo` scope plus
+admin on that repo, so it went in through `gh api` with the token pinned:
+
+```
+$env:GH_TOKEN = (gh auth token --user MbD-Record)
+gh api repos/MbD-Record/MbD/keys --method POST --input -
+```
+
+Key id `166198557`, `read_only=false`, `~/.ssh/mbd_github`, registered under
+the alias `github.com-mbd` in `~/.ssh/config` rather than plain `github.com` so
+it cannot become the default for other GitHub work from this machine.
+
+**To undo:** delete the deploy key from the repo's Settings > Deploy keys, then
+`git remote set-url origin https://github.com/MbD-Record/MbD.git`. Doing that
+puts the 403 straight back, so also clear the wrong GCM credential first.
+
+**Still true, and worth keeping in mind:** `gh` on this machine is logged in as
+`rock-solid-sites`, which has only `READ` on this repo. SSH pushes are now
+unaffected, but `gh` *API* calls still act as `rock-solid-sites` unless
+`GH_TOKEN` is pinned. That is how the original misattribution happened, when
+`gh repo create` ran under the wrong account. Check `gh auth status` before
+anything that writes.
 
 ## 10. PowerShell traps in this repo
 
