@@ -1,11 +1,14 @@
 /**
  * Build-time artwork/metadata enrichment.
  *
- * Bandcamp itself will not cooperate: its oEmbed endpoint returns "bad function"
- * and fetching an album page hits a Fastly "Client Challenge" bot wall. So we
- * never ask Bandcamp for anything. Instead we take the artist/album text that
- * is already in the markdown and match it against catalogues that allow
- * anonymous server-side requests:
+ * Bandcamp is asked first, because it is the source of truth for the link in
+ * the post and the only provider that can see Bandcamp-only releases. It is
+ * reachable from this machine: Node's `fetch` gets the page normally and the
+ * `og:image` / `og:title` meta tags come straight back. (The oEmbed endpoint
+ * returns "bad function" and is not used.)
+ *
+ * When the post does not link to Bandcamp, or Bandcamp has no art, fall back to
+ * catalogues that allow anonymous server-side requests:
  *
  *   iTunes Search API   metadata, 600x600 art, 30s .m4a previews   (no key)
  *   Deezer API          largest catalogue, 1000x1000 art, previews   (no key)
@@ -106,10 +109,13 @@ async function getJSON(url, { headers = {}, timeout = 15000 } = {}) {
 
 /**
  * Bandcamp first: it is the source of truth for the link in the post, and the
- * only one that can see Bandcamp-only releases. It returns a Fastly "Client
- * Challenge" page to any request without a browser User-Agent, which is what
- * makes it look unavailable -- set a realistic UA and og:title / og:image both
- * come back normally.
+ * only one that can see Bandcamp-only releases.
+ *
+ * Fastly answers a challenged request with HTTP 200 and a ~3 KB "Client
+ * Challenge" body, so `res.ok` alone proves nothing -- check the body for the
+ * marker. Node's `fetch` is served normally and needs no special User-Agent;
+ * PowerShell's `Invoke-WebRequest` is the client that gets challenged, so never
+ * probe Bandcamp from PowerShell. See GOTCHAS.md section 12.
  *
  * The `_5` suffix is the 700px rendition, plenty for a 38px thumbnail and
  * always present. `_10` is 1200px but 404s when the upload is smaller.
